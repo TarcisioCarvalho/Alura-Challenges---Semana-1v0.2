@@ -1,0 +1,21 @@
+:root{
+    --desktop:1000px;
+
+    --familia-fonte: 'Raleway', sans-serif;
+
+    --peso-bold:700;
+    --peso-semi-bold:600;
+    --peso-medium:500;
+    --peso-regular:400;
+
+    --tamanho-titulo:1.375rem;
+    --tamanho-normal:1rem;
+    --tamanho-pequeno:.875rem;
+
+    --azul:#2A7AE4;
+    --branco:#FFFFFF;
+    --cinza:#F5F5F5;
+    --azul-claro:#EAF2FD;
+    --cinza-claro:#A2A2A2;
+    --preto-claro:#464646;
+}

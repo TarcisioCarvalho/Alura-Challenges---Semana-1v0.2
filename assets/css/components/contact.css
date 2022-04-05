@@ -1,0 +1,137 @@
+.contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--azul-claro);
+    padding: 1rem;
+}
+
+.contato__lista{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    color: var(--preto-claro);
+    font-weight: var(--peso-medium);
+}
+
+.contato__lista--link{
+
+}
+
+.contato__titulo{
+
+}
+
+.contato__formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.contato__legend{
+    font-weight: var(--peso-bold);
+}
+
+.contato__label--nome{
+    display: block;
+}
+
+.contato__input--nome{
+    width: 91vw;
+    height: 3.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 1px 0rem 0 RGBA(0,0,0,0.30);
+    margin-bottom: 1rem;
+}
+
+.contato__input--nome::placeholder{
+    position: absolute;
+  }
+
+.contato__input--mensagem{
+    width: 91vw;
+    height: 5.125rem;
+    margin-bottom: .5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 1px 0rem 0 RGBA(0,0,0,0.30);
+}
+.contato__input--mensagem::placeholder{
+  position: absolute;
+}
+.contato__button{
+
+}
+
+
+@media screen and (min-width:768px){
+    .contato{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .contato__input--nome{
+        width: 56vw;
+    }
+
+    .contato__input--mensagem{
+        width: 56vw;
+    }
+
+    .contato__tablet{
+        width: 23vw;
+        padding-right: 12vw;
+        align-items: center;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+        
+    }
+
+    .contato__lista{
+        width: 23vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+        padding-top: .5rem;
+        text-align: left;
+    }
+
+    .contato__lista--link{
+        
+    }
+}
+
+@media screen and (min-width:1040px){
+
+    .contato{
+        padding: 0;
+        justify-content: space-around;
+        padding-top: 4rem;
+    }
+
+    .contato__tablet{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0;
+        padding-left: 10vw;
+    }
+
+    .contato__lista{
+        width: 100%;
+        padding-left: 7vw;
+    }
+
+    .contato__input--nome{
+        width: 38vw;
+        margin-right: 7vw;
+    }
+
+    .contato__input--mensagem{
+        width: 38vw;
+        margin-right: 7vw;
+    }
+}

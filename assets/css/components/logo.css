@@ -1,0 +1,27 @@
+.logo{
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+}
+    .logo-alura{
+        width: 1.375rem;
+    }
+    .logo-geek{
+        width: 2.18rem;
+    }
+    .logo-icone{
+        width: 2.18rem;
+    }
+
+@media screen and (min-width:768px){
+    .logo-alura{
+        width: 2.75rem;
+    }
+    .logo-geek{
+        width: 2.75rem;
+    }
+    .logo-icone{
+        width: 2.75rem;
+    } 
+}

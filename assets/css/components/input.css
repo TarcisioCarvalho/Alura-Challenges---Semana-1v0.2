@@ -1,0 +1,19 @@
+.input{
+    display: none;
+}
+@media screen and (min-width:768px){
+    .input{
+        display: flex;
+        width: 40vw;
+        height: 2.5rem;
+        border-radius: 2.25rem;
+        padding: .5rem 1rem .5rem 1rem;
+        background-color: var(--cinza);
+        background-image: url('../../icos/Vectorpesquisa.svg');
+        background-repeat: no-repeat;
+        background-position:  95% ;
+        justify-self: flex-start;
+    }
+}
+
+

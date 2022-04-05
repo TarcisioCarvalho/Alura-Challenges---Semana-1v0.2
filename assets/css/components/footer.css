@@ -1,0 +1,13 @@
+.rodape{
+    width: 100vw;
+    height: 6.375rem;
+    background-color: var(--branco);
+    margin-top: 1rem;
+}
+
+.rodape__paragrafo{
+    color: var(--preto-claro);
+    font-weight: var(--peso-medium);
+    text-align: center;
+    line-height:6.375rem ;
+}

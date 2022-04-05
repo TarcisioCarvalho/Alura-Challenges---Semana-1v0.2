@@ -1,0 +1,105 @@
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cards__container{
+    margin: 0 1rem;
+}
+.cards__titulo{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    font-size: var(--tamanho--titulo);
+    color: var(--preto-claro);
+    font-weight: var(--peso-bold);
+}
+
+.cards_titulo--link{
+    color: var(--azul);
+    font-size: var(--tamanho-pequeno);
+}
+
+.cards__titulo--link-seta{
+    width: .625rem;
+    height: .625rem;
+    padding-left: .5rem;
+}
+.cards__produto{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.cards__produto--imagem{
+    width: 43vw;
+    height: 10.875rem;
+}
+.cards__produto--titulo{
+    color: var(--preto-claro);
+    font-weight: var(--peso-medium);
+    font-size: var(--tamanho-pequeno);
+}
+.cards__produto--preco{
+    color:var(--preto-claro) ;
+    font-weight: var(--peso-bold);
+}
+
+.cards__produto--link{
+    color: var(--azul);
+    font-weight: var(--peso-bold);
+    font-size: var(--tamanho-pequeno);
+    margin-bottom: 1rem;
+}
+
+.cards__produto--desktop{
+    display: none;
+}
+
+@media screen and (min-width:768px){
+    .cards{
+        flex-wrap: nowrap;
+    }
+    .cards__container{
+        margin: 0 2rem;
+    }
+    .cards__titulo{
+        margin-top: 2rem;
+    }
+    .cards__produto--imagem{
+        width: 21vw;
+    }
+
+    .cards__titulo--link-seta{
+        width: 1rem;
+        height: 1rem;
+        padding-left: .5rem;
+    }
+
+    .cards__produto--link{
+        font-size: var(--tamanho-normal);
+        margin-bottom: 2rem;
+    }
+    .cards__produto--desktop{
+        display: none;
+    }
+}
+
+@media screen and (min-width:1040px){
+    .cards__container{
+        margin: 0 6.8rem;
+    }
+    .cards__produto--desktop{
+        display: flex;
+    }
+    .cards__titulo{
+        font-size: 2rem;
+    }
+    .cards__produto--imagem{
+        width: 12vw;
+    }
+    .cards__produto--link{
+        font-size: var(--tamanho-normal);
+        margin-bottom: 4rem;
+    }
+}

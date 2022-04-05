@@ -1,0 +1,11 @@
+@import url(reset.css);
+@import url(variables.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+.container{
+    padding-left: 8vw;
+}
+
+body{
+    font-family: var(--familia-fonte);
+}

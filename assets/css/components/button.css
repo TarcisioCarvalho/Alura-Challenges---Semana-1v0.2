@@ -1,0 +1,47 @@
+.button{
+    width: 8.3125rem;
+    height: 2.5rem;
+    background-color: var(--branco);
+    border: 1px solid var(--azul);
+    color: var(--azul);
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    font-size: var(--tamanho-pequeno);
+    font-weight: var(--peso-semi-bold);
+}
+
+@media screen and (min-width:768px){
+    .button{
+        width: 10.375rem;
+        justify-self: flex-end;
+    }
+}
+
+@media screen and (min-width:1040x){
+    .button{
+        width: 11.375rem;
+        height: 3.1875rem;
+        font-size: var(--tamanho-normal);
+        font-weight: var(--peso-regular);
+    }
+}
+
+
+.button--azul{
+    font-size: var(--tamanho-pequeno);
+    font-weight: var(--peso-semi-bold);
+    width: 9.4375rem;
+    height: 2.5rem;
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    display: block;
+}
+
+@media screen and (min-width:1440x){
+    .button--azul{
+        width: 10.3125rem;
+        height: 3.1875rem;
+        font-size: var(--tamanho-normal);
+        font-weight: var(--peso-regular);
+    }
+}
