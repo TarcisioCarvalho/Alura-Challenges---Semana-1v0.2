@@ -1,0 +1,59 @@
+.produto-home__titulo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: var(--tamanho--titulo);
+    font-weight: var(--peso-bold);
+}
+
+.produto-home__button{
+    margin-top: 1rem;
+}
+.card__produto-home--imagem{
+    position: relative;
+}
+.cards__produto-home--icones{
+    position: absolute;
+    top: 0.6875rem;
+}
+.cards__produto-home--icones--lixeira{
+    right: 3.3125rem;
+}
+
+.cards__produto-home--icones--editar{
+  right: 0.6875rem;
+}
+.cards__produto--id{
+    color: var(--preto-claro);
+    font-size: var(--tamanho-pequeno);
+    font-weight: var(--peso-medium);
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width:768px){
+    .wrap{
+        flex-wrap: wrap;
+    }
+    .produto-home__titulo{
+        flex-direction: row;
+        align-items: center;
+    }
+    .produto-home__button{
+        margin-top: 0rem;
+    }
+}
+
+@media screen and (min-width:1040px){
+    .produto-home__titulo{
+        margin-top: 4rem;
+       font-size: 2rem;
+    }
+    .produto-home__button{
+        width: 10.25rem;
+        height: 3.1875rem;
+    }
+    .cards__produto--id{
+        margin-bottom: 4rem;
+    }
+}

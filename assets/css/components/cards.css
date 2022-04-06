@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: var(--cinza-fundo);
 }
 .cards__container{
     margin: 0 1rem;
@@ -93,6 +94,7 @@
         display: flex;
     }
     .cards__titulo{
+        margin-top: 4rem;
         font-size: 2rem;
     }
     .cards__produto--imagem{
@@ -103,3 +105,87 @@
         margin-bottom: 4rem;
     }
 }
+/*
+.card_produto{
+    display: flex;
+}
+
+.card__produto--imagem{
+    display: block;
+    width: 100vw;
+    height: 12rem;
+    border: 1px solid black;
+}
+
+.card__produto--dados{
+    display: block;
+    border: 1px solid red;
+    width: 56vw;
+}
+
+.card__produto--titulo{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: var(--preto-claro);
+    font-weight: var(--peso-medium);
+    font-size: var(--tamanho-titulo);
+}
+.card__produto--preco{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: .5rem;
+    color:var(--preto-claro) ;
+    font-weight: var(--peso-bold);
+}
+
+.card__produto--descricao{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    font-size: var(--tamanho-pequeno);
+    color: var(--preto-claro);
+    font-weight: var(--peso-regular);
+    line-height: 1rem;
+}
+
+@media screen and (min-width:768px){
+    .card_produto{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .card__produto--imagem{
+        width: 33vw;
+        height: 9.8125rem;
+    }
+    
+    .card__produto--titulo{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        color: var(--preto-claro);
+        font-weight: var(--peso-medium);
+        font-size: var(--tamanho-titulo);
+    }
+    .card__produto--preco{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: .5rem;
+        color:var(--preto-claro) ;
+        font-weight: var(--peso-bold);
+    }
+    
+    .card__produto--descricao{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+        font-size: var(--tamanho-pequeno);
+        color: var(--preto-claro);
+        font-weight: var(--peso-regular);
+        line-height: 1rem;
+    }
+}*/

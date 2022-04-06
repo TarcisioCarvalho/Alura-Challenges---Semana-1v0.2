@@ -1,0 +1,68 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 4.75rem;
+}
+
+.login__titulo{
+    margin-bottom: 1rem;
+    font-weight: var(--peso-bold);
+}
+
+.login__input--email{
+    width: 76vw;
+    height: 2.5625rem;
+    margin-bottom: 1rem;
+}
+
+.login__input--senha{
+    width: 76vw;
+    height: 2.5625rem;
+    margin-bottom: 1rem;
+}
+
+.login__button{
+    width: 30vw;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:768px){
+    .login{
+        margin-top: 2.8125rem;
+        margin-bottom: 3.1825rem;
+    }
+    .login__input--email{
+        width: 35vw;
+    }
+    .login__input--senha{
+        width: 35vw;
+    }
+    .login__button{
+        width: 14vw;
+    }
+}
+
+@media screen and (min-width:1040px){
+    .login{
+        margin-top: 5.68rem;
+        margin-bottom: 5.68rem;
+    }
+    .login__titulo{
+        font-size: 1.125rem;
+    }
+    .login__input--email{
+        width: 29vw;
+        margin: 1rem auto;
+    }
+    .login__input--senha{
+        width: 29vw;
+        margin: 1rem auto;
+    }
+    .login__button{
+        width: 29vw;
+        margin: 1rem auto;
+    }
+}

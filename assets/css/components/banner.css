@@ -11,6 +11,7 @@
     gap: .5rem;
     padding-left: 8vw;
     justify-content: flex-end;
+    box-sizing: border-box;
 }
 
 .banner__titulo{
