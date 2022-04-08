@@ -31,14 +31,16 @@
        
         </form>
         <main>
-            <form action="#" >
+            <form action="#" data-form >
                 <fieldset class="login">
-                    <legend class="login__titulo">Iniciar Sessão</legend>
-                    <label for="nome" class="contato__label--nome"></label>
-                    <input id="nome" type="text" class="contato__input--nome login__input--email" placeholder="Escreva seu email">
-                    <input type="text" class="contato__input--mensagem login__input--senha" placeholder="Escreva sua senha">
-                    <button class="button--azul login__button" type="submit" >Entrar</button>
+                    <legend class="login__titulo" data-legend>Iniciar Sessão/Cadastrar Novo Usuário</legend>
+                    <label for="email" class="contato__label--nome"></label>
+                    <input id="email" type="email" class="contato__input--nome login__input--email" placeholder="Escreva seu email" data-email>
+                    <input type="password" class="contato__input--mensagem login__input--senha" placeholder="Escreva sua senha" data-senha>
+                    <button class="button--azul login__button" type="submit" data-autenticar >Entrar</button>
+                    <button class="button--azul login__button" type="submit" data-cadastrar >Cadastrar</button>
                 </fieldset>
+            </form>
                 <section class="contato">
                     <div class="contato__tablet">
                         <div class="logo">
@@ -70,6 +72,10 @@
         <footer class="rodape">
             <p class="rodape__paragrafo">Desenvolvido por Tarcísio Carvalho 2022</p>
         </footer>
+        <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+        <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+        <script src="./assets/js/auth/auth-login.js"></script>
+        <script src="./assets/js/firebase/firebase-login.js"></script>
     </body>
 
 </html>

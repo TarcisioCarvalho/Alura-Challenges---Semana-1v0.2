@@ -26,6 +26,23 @@
     margin-bottom: 1.75rem;
 }
 
+.banner__ancora{
+    width: 33vw;
+    height: 2.5rem;
+    background-color:var(--azul);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--tamanho-pequeno);
+    font-weight: var(--peso-semi-bold);
+}
+
+.banner__ancora:hover{
+    background-color: var(--azul-hover);
+    color: var(--azul);
+    border:1px solid var(--azul)
+}
+
 @media screen and (min-width:768px){
     .banner{
         height: 22rem;
@@ -49,5 +66,10 @@
     }
     .banner__button{
         margin-bottom: 2rem;
+    }
+    .banner__ancora{
+        width: 9vw;
+        font-size: var(--tamanho-normal);
+        font-weight: var(--peso-regular);
     }
 }

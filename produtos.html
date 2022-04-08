@@ -29,21 +29,27 @@
         </header>
         <main>
             <section class="produto-cadastro">
-                <form action="" class="produto-cadastro__formulario">
+                <form action="" class="produto-cadastro__formulario" >
                     <legend class="produto-cadastro__formulario--legend">Adicionar novo produto </legend>
                     <div class="produto-cadastro__formulario--arquivos">
                         <label for="file" class="produto-cadastro__formulario--label"><img src="./assets/icos/Vectoradd.svg" alt="" class="produto-cadastro__formulario--legend--icone"> <p class="produto-cadastro__formulario--label--paragrafo">Adicionar uma imagem para o produto</p> </label>
                         <p class="produto-cadastro__formulario--paragrafo-ou">ou</p>
                         <button class="button produto-cadastro__formulario--arquivos--button"> <p class="tablet">Procure no seu tablet</p> <p class="computador">Procure no seu computador</p> </button>
                     </div>
-                    <input type="file" id="file" class="produto-cadastro__formulario--arquivo">
+                    <input type="file" id="file" class="produto-cadastro__formulario--arquivo" data-arquivo>
                     <label for="nome-produto">Nome do produto</label>
-                    <input type="text" id="nome-produto" class="produto__cadastro--texto">
+                    <input type="text" id="nome-produto" class="produto__cadastro--texto" data-nome>
                     <label for="preco-produto">Preço do produto</label>
-                    <input type="text"  id="preco-produto" class="produto__cadastro--texto">
+                    <input type="text"  id="preco-produto" class="produto__cadastro--texto" data-preco>
+                    <label for="categoria">Categoria do produto</label>
+                    <select name="categoria" id="" data-categoria>
+                        <option value="star-wars">Star Wars</option>
+                        <option value="consoles">Consoles</option>
+                        <option value="diversos">Diversos</option>
+                    </select>
                     <label for="descricao-produto">Descrição do produto</label>
-                    <input type="text" id="descricao-produto" class="produto__cadastro--texto">
-                    <button type="submit" class="button--azul produto__cadastro--button">Adicionar produto</button>
+                    <input type="text" id="descricao-produto" class="produto__cadastro--texto" data-descricao>
+                    <button type="submit" class="button--azul produto__cadastro--button" data-botao-produto="">Adicionar produto</button>
                 </form>
             </section>
             <section class="contato">
@@ -76,5 +82,12 @@
         <footer class="rodape">
             <p class="rodape__paragrafo">Desenvolvido por Tarcísio Carvalho 2022</p>
         </footer>
+        <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+        <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
+        
+        <script src="./assets/js/firebase/firebase.js"></script>
+        <script src="./assets/js/app/produtos.js"></script>
     </body>
 </html>

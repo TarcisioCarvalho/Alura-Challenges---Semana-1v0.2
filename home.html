@@ -32,7 +32,8 @@
         <section class="banner">
             <h1 class="banner__titulo">Dezembro Promocional</h1>
             <p class="banner__paragrafo">Produtos selecionados com 33% de desconto</p>
-            <button class="button--azul banner__button">Ver Consoles</button>
+            
+            <a href="#consoles" class="banner__button banner__ancora">Ver Consoles</a>
         </section>
         <h2 class="cards__titulo cards__container">Titulo<span><a href="#" class="cards_titulo--link">Ver tudo <img src="./assets/icos/Vectorsetinha.svg" alt="" class="cards__titulo--link-seta"></a></span></h2>
         <section class="cards cards__container">
@@ -74,7 +75,7 @@
             </article>
         </section>
         <h2 class="cards__titulo cards__container">Titulo<span><a href="#" class="cards_titulo--link">Ver tudo <img src="./assets/icos/Vectorsetinha.svg" alt="" class="cards__titulo--link-seta"></a></span></h2>
-        <section class="cards cards__container">
+        <section class="cards cards__container" id="consoles">
             <article class="cards__produto">
                 <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
                 <h3 class="cards__produto--titulo">Produto XYZ</h3>
@@ -181,5 +182,12 @@
     <footer class="rodape">
         <p class="rodape__paragrafo">Desenvolvido por Tarcísio Carvalho 2022</p>
     </footer>
+    <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
+
+    <script src="./assets/js/firebase/firebase.js"></script>
+    <script src="./assets/js/app/home.js"></script>
 </body>
 </html>
