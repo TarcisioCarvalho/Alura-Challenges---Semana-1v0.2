@@ -19,6 +19,29 @@
 </head>
   
     <body data-body class="none">
+        <header class="cabecalho">
+            <div class="cabecalho__logo-pesquisa">
+                <a href="#">
+                    <div class="logo">
+                        <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
+                        <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
+                        <img src="./assets/img/AluraGeekgeek.svg" alt="" class="logo-icone">
+                    </div>
+                </a>
+                <input type="text" class="input" placeholder="O que deseja encontrar?" data-pesquisa>
+            </div>
+            <button class="button" data-button-login>
+                Login
+            </button>
+            <input type="text" class="cabecalho__input--mobile none" data-input-mobile>
+            <a href=""#>
+                <img src="./assets/icos/Vectorpesquisa.svg" alt="" class="cabecalho__pesquisa" data-vector-pesquisa>
+            </a>
+            
+        </header>
+        
+        <script src="./assets/js/app/cabecalho.js"></script>
+        <!--
         <header class="cabecalho ">
             <div class="cabecalho__logo-pesquisa">
                 <a href="#">
@@ -37,6 +60,7 @@
                 <img src="./assets/icos/Vectorpesquisa.svg" alt="" class="cabecalho__pesquisa">
             </a>
         </header>
+        -->
         <main>
         <h2 class="cards__titulo cards__container produto-home__titulo">Todos os produtos<span><button class="button--azul produto-home__button" data-add-produto>Adicionar produto</button></span></h2>
     <section class="cards cards__container wrap" data-todos-produtos>

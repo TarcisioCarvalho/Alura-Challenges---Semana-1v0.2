@@ -5,8 +5,11 @@ const redirecionaLogin = (e)=>{
 
 
 const pesquisa = (e) =>{
+
     e.preventDefault()
-    if(e.keyCode === 13){
+
+    if(e.keyCode === 13 && e.target.value!='')
+    {   
         window.location.href = `pesquisa.html?nome=${e.target.value}`;
     }
 }
@@ -14,8 +17,14 @@ const pesquisa = (e) =>{
 const aparecePesquisa = (e) =>{
 
     e.preventDefault();
+
+    buttonLogin.classList.toggle('flex');
     buttonLogin.classList.toggle('none');
+
+    
     inputPesquisaMobile.classList.toggle('none');
+    
+
 }
 
 

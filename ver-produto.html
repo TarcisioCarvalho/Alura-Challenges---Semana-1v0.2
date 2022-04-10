@@ -9,6 +9,28 @@
     <title>Card | Component</title>
 </head>
 <body>
+    <header class="cabecalho">
+        <div class="cabecalho__logo-pesquisa">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
+                    <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
+                    <img src="./assets/img/AluraGeekgeek.svg" alt="" class="logo-icone">
+                </div>
+            </a>
+            <input type="text" class="input" placeholder="O que deseja encontrar?" data-pesquisa>
+        </div>
+        <button class="button" data-button-login>
+            Login
+        </button>
+        <input type="text" class="cabecalho__input--mobile none" data-input-mobile>
+        <a href=""#>
+            <img src="./assets/icos/Vectorpesquisa.svg" alt="" class="cabecalho__pesquisa" data-vector-pesquisa>
+        </a>
+        
+    </header>
+    
+    <script src="./assets/js/app/cabecalho.js"></script>
     <!--
     <article class="card__produto">
         <img src="./assets/img/gameboy.jpg" alt="" class="card__produto--imagem">
@@ -20,12 +42,17 @@
         </div>
     </article>
     -->
-  
-    <h2 class="cards__titulo cards__container" data-titulo>Titulo
+   <main>
+    <h2 class="cards__titulo cards__container" data-titulo>Produtos Similares
         <span>
-            <a href="#" class="cards_titulo--link">
+            <a href="#" class="cards_titulo--link" data-ver-tudo>
                 Ver tudo <img src="./assets/icos/Vectorsetinha.svg" alt="" class="cards__titulo--link-seta"></a></span></h2>
     <section class="cards cards__container" data-section>
+    </section>
+
+   </main> 
+  
+    
         <!--
         <article class="cards__produto">
             <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
@@ -66,7 +93,7 @@
             <a href="" class="cards__produto--link">Ver produto</a>
         </article>
         -->
-    </section>
+    
     <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
     <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>

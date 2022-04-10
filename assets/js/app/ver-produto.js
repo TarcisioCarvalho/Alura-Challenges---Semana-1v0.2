@@ -9,13 +9,13 @@ const categoria = searchParams.get('categoria');
 
     const verProduto =  (event)=> {
         event.preventDefault();
-        alert('oi');
-        const articleProduto = (event.target).parentNode.parentNode.removeChild((event.target).parentNode);
-        console.log(articleProduto);
+       
+        //const articleProduto = (event.target).parentNode.parentNode.removeChild((event.target).parentNode);
+        const articleProduto = event.target.parentNode;
         const id = articleProduto.children[4].innerText;
-        console.log(id);
+       
         const categoria = articleProduto.children[5].innerText;
-        console.log(categoria);
+        
         window.location= `ver-produto.html?id=${id}&categoria=${categoria}`;
     }
     
@@ -110,4 +110,11 @@ dbRef.on('value',(snapshoot)=>{
     })
 })
 
+
+const linkVerTudo = document.querySelector('[data-ver-tudo]');
+
+linkVerTudo.addEventListener('click', (e)=>{
+    e.preventDefault();
+    window.location.href = 'ver-tudo.html';
+})
 

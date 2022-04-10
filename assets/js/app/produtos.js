@@ -71,7 +71,7 @@ const updadeDados = (imagem) =>{
     }else{
         if(imagem.type.includes('image'))
          {
-             
+
         const date =  Date.now();
         const nome = date + '-' + imagem.name;
         const caminho = 'Produtos/' + nome;
@@ -143,7 +143,9 @@ const cadastraProduto = (e) => {
        const caminho = 'Produtos/' + nome;
        const storeRef = firebase.storage().ref(caminho);
 
-
+        mainData.classList.toggle('none');
+        carregaImagem.classList.toggle('none');
+        aguardeMsg.classList.toggle('none');
         storeRef.put(imagem)
         .then((Elemento)=>{
             storeRef.getDownloadURL()
@@ -158,8 +160,10 @@ const cadastraProduto = (e) => {
                     descricao: descricao.value
                 }
 
-                dbRef.push(data).then((data)=>{
-                    console.log('Funcionou!');
+                dbRef.push(data).then((data)=>
+                {
+                    alert('Produto cadastrado com sucesso!');
+                    location.reload();
 
                 }).catch(()=> console.log('Deu ruim')) 
             } )
@@ -181,6 +185,9 @@ const descricao = document.querySelector('[data-descricao]')
 const categoria = document.querySelector('[data-categoria]');
 const botaoProduto = document.querySelector('[data-botao-produto]');
 const arquivo = document.querySelector('[data-arquivo]');
+const mainData = document.querySelector('[data-main]'); 
+const carregaImagem = document.querySelector('[data-img-animation]');
+const aguardeMsg = document.querySelector('[ data-animation-frase]');
 
 const database = firebase.database();
 const dbRef =  database.ref('Produto');

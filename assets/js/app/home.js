@@ -1,18 +1,16 @@
 firebase.auth().signOut();
 
 
-const verProduto =  (event)=>{
+
+
+const verProduto =  (event)=> {
     event.preventDefault();
-    const articleProduto = (event.target).parentNode.parentNode.removeChild((event.target).parentNode);
-    console.log(articleProduto);
+    //const articleProduto = (event.target).parentNode.parentNode.removeChild((event.target).parentNode);
+    const articleProduto = event.target.parentNode;
     const id = articleProduto.children[4].innerText;
-    console.log(id);
     const categoria = articleProduto.children[5].innerText;
-    console.log(categoria);
     window.location= `ver-produto.html?id=${id}&categoria=${categoria}`;
 }
-
-
 
 
 const InputArticleStarWars = (stringArticle,stringArticleDesktop,countStarwars) => 
@@ -64,7 +62,7 @@ const atualizaDados = async (snapshoot) =>
 
         const stringArticle = 
         `<article class="cards__produto">
-        <img src=${urlImagem} alt="" class="cards__produto--imagem">
+        <img src=${urlImagem} alt=${descricaoProduto} class="cards__produto--imagem">
         <h3 class="cards__produto--titulo">${nomeProduto}</h3>
         <p class="cards__produto--preco">${precoProduto}</p>
         <a href="" class="cards__produto--link" data-ver-produto>Ver produto</a>
@@ -74,7 +72,7 @@ const atualizaDados = async (snapshoot) =>
 
         const stringArticleDesktop =
         `<article class="cards__produto cards__produto--desktop">
-        <img src=${urlImagem} alt="" class="cards__produto--imagem">
+        <img src=${urlImagem} alt=${descricaoProduto} class="cards__produto--imagem">
         <h3 class="cards__produto--titulo">${nomeProduto}</h3>
         <p class="cards__produto--preco">${precoProduto}</p>
         <a href="" class="cards__produto--link" data-ver-produto>Ver produto</a>

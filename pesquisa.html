@@ -4,12 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/base/base.css">
+    <link rel="stylesheet" href="./assets/css/components/components.css">
     <title>Pesquisa</title>
 </head>
 <body>
-        PEsquisa
+    <header class="cabecalho">
+        <div class="cabecalho__logo-pesquisa">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
+                    <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
+                    <img src="./assets/img/AluraGeekgeek.svg" alt="" class="logo-icone">
+                </div>
+            </a>
+            <input type="text" class="input" placeholder="O que deseja encontrar?" data-pesquisa>
+        </div>
+        <button class="button" data-button-login>
+            Login
+        </button>
+        <input type="text" class="cabecalho__input--mobile none" data-input-mobile>
+        <a href=""#>
+            <img src="./assets/icos/Vectorpesquisa.svg" alt="" class="cabecalho__pesquisa" data-vector-pesquisa>
+        </a>
+        
+    </header>
+    
+    <script src="./assets/js/app/cabecalho.js"></script>
 
+    <main>
 
+        <h2 class="cards__titulo cards__container" data-titulo></h2>
+        <section class="cards cards__container" data-cards>
+        </section>
+
+    </main>
 
         <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
         <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>

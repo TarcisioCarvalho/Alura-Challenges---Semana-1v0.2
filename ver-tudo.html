@@ -9,9 +9,9 @@
         <title>Ver tudo</title>
     </head>
     <body>
-        <header class="cabecalho ">
+        <header class="cabecalho">
             <div class="cabecalho__logo-pesquisa">
-                <a href="#">
+                <a href="index.html">
                     <div class="logo">
                         <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
                         <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
@@ -23,14 +23,21 @@
             <button class="button" data-button-login>
                 Login
             </button>
+            <input type="text" class="cabecalho__input--mobile none" data-input-mobile>
             <a href=""#>
-                <img src="./assets/icos/Vectorpesquisa.svg" alt="" class="cabecalho__pesquisa">
+                <img src="./assets/icos/Vectorpesquisa.svg" alt="" class="cabecalho__pesquisa" data-vector-pesquisa>
             </a>
+            
         </header>
+        
         <script src="./assets/js/app/cabecalho.js"></script>
 
-        <main>
-            <h2 class="cards__titulo cards__container">Todos os Produtos</h2>
+
+        <p class="animation__frase  "  data-animation-frase>Aguarde...........</p>
+        <div class="animation__imagem  " data-img-animation>
+        </div>
+        <main class="none" data-main>
+            <h2 class="cards__titulo cards__container" data-titulo>Todos os Produtos</h2>
             <section class="cards cards__container" data-cards>
         <!-- 
         <article class="cards__produto">
@@ -47,15 +54,48 @@
         </article>
         -->
     </section>
+</main>
+
+<section class="contato">
+    <div class="contato__tablet">
+        <div class="logo">
+            <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
+            <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
+            <img src="./assets/img/AluraGeekgeek.svg" alt="" class="logo-icone">
+        </div>
+        <ul class="contato__lista">
+            <li> <a href="" class="contato__lista--link"> Quem somos nós</a></li>
+            <li> <a href="" class="contato__lista--link"> Política de privacidade</a> </li>
+            <li> <a href="" class="contato__lista--link"> Programa fidelidade</a></li>
+            <li> <a href="" class="contato__lista--link"> Nossas lojas</a></li>
+            <li> <a href="" class="contato__lista--link"> Quero ser franqueado</a></li>
+            <li> <a href="" class="contato__lista--link"> Anuncie aqui</a></li>
+        </ul>
+    </div>
+    <form action="#" class="contato__formulario">
+        <fieldset>
+            <legend class="contato__legend">Fale conosco</legend>
+            
+                <label for="nome" class="contato__label--nome">Nome</label>
+                <input id="nome" type="text" class="contato__input--nome" placeholder="Escreva seu nome" required>
+            
+            
+
+            <input type="text" class="contato__input--mensagem" placeholder="Escreva sua mensagem" required>
+            <button class="button--azul" type="submit" >Enviar mensagem</button>
+        </fieldset>
+    </form>
+</section>
+       
+    
+       
+
         <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
         <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
 
         <script src="./assets/js/firebase/firebase.js"></script>
-        <script src="./assets/js/app/cards.js"></script>
-    
-        </main>
         <script src="./assets/js/app/ver-tudo.js"></script>
     </body>
 </html>

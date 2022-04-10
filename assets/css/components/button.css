@@ -1,8 +1,7 @@
 .button{
-    display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
+    
     width: 8.3125rem;
     height: 2.5rem;
     background-color: var(--branco);
@@ -21,7 +20,7 @@
     }
 }
 
-@media screen and (min-width:1040x){
+@media screen and (min-width:1040px) {
     .button{
         width: 11.375rem;
         height: 3.1875rem;
@@ -31,8 +30,9 @@
 }
 
 
+
+
 .button--azul{
-    display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;

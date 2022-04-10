@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <header class="cabecalho ">
+    <header class="cabecalho">
         <div class="cabecalho__logo-pesquisa">
-            <a href="#">
+            <a href="index.html">
                 <div class="logo">
                     <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
                     <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
@@ -21,13 +21,16 @@
             </a>
             <input type="text" class="input" placeholder="O que deseja encontrar?" data-pesquisa>
         </div>
-        <button class="button" data-button-login>
+        <button class="button flex" data-button-login>
             Login
         </button>
+        <input type="text" class="cabecalho__input--mobile none" data-input-mobile>
         <a href=""#>
-            <img src="./assets/icos/Vectorpesquisa.svg" alt="" class="cabecalho__pesquisa">
+            <img src="./assets/icos/Vectorpesquisa.svg" alt="" class="cabecalho__pesquisa" data-vector-pesquisa>
         </a>
+        
     </header>
+    
     <script src="./assets/js/app/cabecalho.js"></script>
     <main>
         <section class="banner">
