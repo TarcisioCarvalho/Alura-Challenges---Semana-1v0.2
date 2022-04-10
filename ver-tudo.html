@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/base/base.css">
+        <link rel="stylesheet" href="./assets/css/components/components.css">
+        <title>Ver tudo</title>
+    </head>
+    <body>
+        <header class="cabecalho ">
+            <div class="cabecalho__logo-pesquisa">
+                <a href="#">
+                    <div class="logo">
+                        <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
+                        <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
+                        <img src="./assets/img/AluraGeekgeek.svg" alt="" class="logo-icone">
+                    </div>
+                </a>
+                <input type="text" class="input" placeholder="O que deseja encontrar?" data-pesquisa>
+            </div>
+            <button class="button" data-button-login>
+                Login
+            </button>
+            <a href=""#>
+                <img src="./assets/icos/Vectorpesquisa.svg" alt="" class="cabecalho__pesquisa">
+            </a>
+        </header>
+        <script src="./assets/js/app/cabecalho.js"></script>
+
+        <main>
+            <h2 class="cards__titulo cards__container">Todos os Produtos</h2>
+            <section class="cards cards__container" data-cards>
+        <!-- 
+        <article class="cards__produto">
+            <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
+            <h3 class="cards__produto--titulo">Produto XYZ</h3>
+            <p class="cards__produto--preco">R$60,00</p>
+            <a href="" class="cards__produto--link">Ver produto</a>
+        </article>
+        <article class="cards__produto cards__produto--desktop">
+            <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
+            <h3 class="cards__produto--titulo">Produto XYZ</h3>
+            <p class="cards__produto--preco">R$60,00</p>
+            <a href="" class="cards__produto--link">Ver produto</a>
+        </article>
+        -->
+    </section>
+        <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+        <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
+
+        <script src="./assets/js/firebase/firebase.js"></script>
+        <script src="./assets/js/app/cards.js"></script>
+    
+        </main>
+        <script src="./assets/js/app/ver-tudo.js"></script>
+    </body>
+</html>

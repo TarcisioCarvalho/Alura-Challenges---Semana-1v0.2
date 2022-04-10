@@ -10,3 +10,32 @@ body{
     font-family: var(--familia-fonte);
     background-color: var(--cinza-fundo);
 }
+
+.none{
+    display: none;
+}
+
+.block{
+    display: flex;
+}
+
+@keyframes loading {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+.animation__imagem{
+    animation: loading 2s linear infinite;
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border-radius: 50%;
+}

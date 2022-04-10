@@ -9,6 +9,7 @@
     <title>Card | Component</title>
 </head>
 <body>
+    <!--
     <article class="card__produto">
         <img src="./assets/img/gameboy.jpg" alt="" class="card__produto--imagem">
         <div class="card__produto--dados">
@@ -18,19 +19,20 @@
                  Doloribus cumque sapiente aliquid asperiores!</p>
         </div>
     </article>
-
-
+    -->
+  
     <h2 class="cards__titulo cards__container" data-titulo>Titulo
         <span>
             <a href="#" class="cards_titulo--link">
                 Ver tudo <img src="./assets/icos/Vectorsetinha.svg" alt="" class="cards__titulo--link-seta"></a></span></h2>
     <section class="cards cards__container" data-section>
+        <!--
         <article class="cards__produto">
             <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
             <h3 class="cards__produto--titulo">Produto XYZ</h3>
             <p class="cards__produto--preco">R$60,00</p>
             <a href="" class="cards__produto--link" data-ver-produto>Ver produto</a>
-            <p class="cards__produto--id" style="display: none;">1649416552530</p>
+            <p class="cards__produto--id" style="display: none;">1112233</p>
             <p class="cards__produto--categoria" style="display: none;">consoles</p>
         </article>
         <article class="cards__produto">
@@ -63,8 +65,14 @@
             <p class="cards__produto--preco">R$60,00</p>
             <a href="" class="cards__produto--link">Ver produto</a>
         </article>
+        -->
     </section>
+    <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
+    <script src="./assets/js/firebase/firebase.js"></script>
     
-   <script src="./assets/js/app/card.js"></script>
+   <script type="module" src="./assets/js/app/ver-produto.js"></script>
 </body>
 </html>

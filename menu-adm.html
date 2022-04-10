@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="./assets/css/base/base.css">
     <link rel="stylesheet" href="./assets/css/components/components.css">
     <title>Produto-Home</title>
+
+        <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+        <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
+
+        <script src="./assets/js/firebase/firebase.js"></script>
+        <script type="module" src="./assets/js/utils/verifica-autenticacao.js"></script>
+        <script type="module" src="./assets/js/app/menu-adm.js"></script>
 </head>
-    <body>
+  
+    <body data-body class="none">
         <header class="cabecalho ">
             <div class="cabecalho__logo-pesquisa">
                 <a href="#">
@@ -20,7 +30,7 @@
                 </a>
                 <input type="text" class="input" placeholder="O que deseja encontrar?">
             </div>
-            <button class="button">
+            <button class="button" data-button-login>
                 Login
             </button>
             <a href=""#>
@@ -28,9 +38,12 @@
             </a>
         </header>
         <main>
-        <h2 class="cards__titulo cards__container produto-home__titulo">Todos os produtos<span><button class="button--azul produto-home__button">Adicionar produto</button></span></h2>
-    <section class="cards cards__container wrap">
-        <article class="cards__produto">
+        <h2 class="cards__titulo cards__container produto-home__titulo">Todos os produtos<span><button class="button--azul produto-home__button" data-add-produto>Adicionar produto</button></span></h2>
+    <section class="cards cards__container wrap" data-todos-produtos>
+        <div class="animation none" data-animation>
+            <img src="./assets/img/baby-yoda.jpg" alt="" class="animation__imagem">
+        </div>
+       <!-- <article class="cards__produto">
             <div class="cards__produto--imagem card__produto-home--imagem">
                 <img src="./assets/img/pikachu-plush.jpg" alt="" class="cards__produto--imagem">
                 <a href=""><img src="./assets/icos/VectorLixeira.svg" alt="" class="cards__produto-home--icones cards__produto-home--icones--lixeira"></a>
@@ -238,8 +251,8 @@
             <h3 class="cards__produto--titulo">Produto XYZ</h3>
             <p class="cards__produto--preco">R$60,00</p>
             <a href="" class="cards__produto--link">Ver produto</a>
-        </article>
-    </section>
+        </article>-->
+    </section> 
     <section class="contato">
         <div class="contato__tablet">
             <div class="logo">
@@ -267,8 +280,14 @@
         </form>
     </section>
     </main>
+
         <footer class="rodape">
             <p class="rodape__paragrafo">Desenvolvido por Tarcísio Carvalho 2022</p>
         </footer>
+      
+
+       
+
+
     </body>
 </html>

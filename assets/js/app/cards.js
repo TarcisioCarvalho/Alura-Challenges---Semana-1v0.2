@@ -1,6 +1,4 @@
 const atualizaDados = (snapshoot) =>{
-    console.log(snapshoot);
-    console.log(snapshoot.val());
     snapshoot.forEach(element => {
         const nomeProduto = element.val().nome;
         const precoProduto = element.val().preco;

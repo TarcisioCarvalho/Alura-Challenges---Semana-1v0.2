@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/components/components.css">
     <title>Produtos</title>
 </head>
-    <body>
+    <body data-body class="none">
         <header class="cabecalho ">
             <div class="cabecalho__logo-pesquisa">
                 <a href="#">
@@ -20,7 +20,7 @@
                 </a>
                 <input type="text" class="input" placeholder="O que deseja encontrar?">
             </div>
-            <button class="button">
+            <button class="button" data-button-login>
                 Login
             </button>
             <a href=""#>
@@ -32,7 +32,11 @@
                 <form action="" class="produto-cadastro__formulario" >
                     <legend class="produto-cadastro__formulario--legend">Adicionar novo produto </legend>
                     <div class="produto-cadastro__formulario--arquivos">
-                        <label for="file" class="produto-cadastro__formulario--label"><img src="./assets/icos/Vectoradd.svg" alt="" class="produto-cadastro__formulario--legend--icone"> <p class="produto-cadastro__formulario--label--paragrafo">Adicionar uma imagem para o produto</p> </label>
+                        <label for="file" class="produto-cadastro__formulario--label">
+                            <img src="" alt="" class="produto-cadastro__formulario--label--imagem" data-arquivo-imagem>
+                            <img src="./assets/icos/Vectoradd.svg" alt="" class="produto-cadastro__formulario--legend--icone">
+                             <p class="produto-cadastro__formulario--label--paragrafo">Adicionar uma imagem para o produto</p>
+                         </label>
                         <p class="produto-cadastro__formulario--paragrafo-ou">ou</p>
                         <button class="button produto-cadastro__formulario--arquivos--button"> <p class="tablet">Procure no seu tablet</p> <p class="computador">Procure no seu computador</p> </button>
                     </div>

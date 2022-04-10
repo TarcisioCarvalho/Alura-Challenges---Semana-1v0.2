@@ -19,138 +19,33 @@
                     <img src="./assets/img/AluraGeekgeek.svg" alt="" class="logo-icone">
                 </div>
             </a>
-            <input type="text" class="input" placeholder="O que deseja encontrar?">
+            <input type="text" class="input" placeholder="O que deseja encontrar?" data-pesquisa>
         </div>
-        <button class="button">
+        <button class="button" data-button-login>
             Login
         </button>
         <a href=""#>
             <img src="./assets/icos/Vectorpesquisa.svg" alt="" class="cabecalho__pesquisa">
         </a>
     </header>
+    <script src="./assets/js/app/cabecalho.js"></script>
     <main>
         <section class="banner">
             <h1 class="banner__titulo">Dezembro Promocional</h1>
             <p class="banner__paragrafo">Produtos selecionados com 33% de desconto</p>
-            
             <a href="#consoles" class="banner__button banner__ancora">Ver Consoles</a>
         </section>
-        <h2 class="cards__titulo cards__container">Titulo<span><a href="#" class="cards_titulo--link">Ver tudo <img src="./assets/icos/Vectorsetinha.svg" alt="" class="cards__titulo--link-seta"></a></span></h2>
-        <section class="cards cards__container">
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto cards__produto--desktop">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto cards__produto--desktop">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
+        <h2 class="cards__titulo cards__container" >Star Wars<span><a href="#" class="cards_titulo--link" data-ver-tudo>Ver tudo <img src="./assets/icos/Vectorsetinha.svg" alt="" class="cards__titulo--link-seta"></a></span></h2>
+        <section class="cards cards__container" data-star-wars>
+          
         </section>
-        <h2 class="cards__titulo cards__container">Titulo<span><a href="#" class="cards_titulo--link">Ver tudo <img src="./assets/icos/Vectorsetinha.svg" alt="" class="cards__titulo--link-seta"></a></span></h2>
-        <section class="cards cards__container" id="consoles">
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto cards__produto--desktop">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto cards__produto--desktop">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
+        <h2 class="cards__titulo cards__container" >Consoles<span><a href="#" class="cards_titulo--link" data-ver-tudo>Ver tudo <img src="./assets/icos/Vectorsetinha.svg" alt="" class="cards__titulo--link-seta"></a></span></h2>
+        <section class="cards cards__container" id="consoles" data-console>
+           
         </section>
-        <h2 class="cards__titulo cards__container">Titulo<span><a href="#" class="cards_titulo--link">Ver tudo <img src="./assets/icos/Vectorsetinha.svg" alt="" class="cards__titulo--link-seta"></a></span></h2>
-        <section class="cards cards__container">
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto cards__produto--desktop">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
-            <article class="cards__produto cards__produto--desktop">
-                <img src="./assets/img/baby-yoda.jpg" alt="" class="cards__produto--imagem">
-                <h3 class="cards__produto--titulo">Produto XYZ</h3>
-                <p class="cards__produto--preco">R$60,00</p>
-                <a href="" class="cards__produto--link">Ver produto</a>
-            </article>
+        <h2 class="cards__titulo cards__container">Diversos<span><a href="#" class="cards_titulo--link" data-ver-tudo>Ver tudo <img src="./assets/icos/Vectorsetinha.svg" alt="" class="cards__titulo--link-seta"></a></span></h2>
+        <section class="cards cards__container" data-diversos>
+           
         </section>
         <section class="contato">
             <div class="contato__tablet">
@@ -184,8 +79,8 @@
     </footer>
     <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
     <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
 
     <script src="./assets/js/firebase/firebase.js"></script>
     <script src="./assets/js/app/home.js"></script>

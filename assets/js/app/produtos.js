@@ -1,27 +1,154 @@
 
-const  LoGa =  () => {
-    firebase.auth().signInWithEmailAndPassword('tarcisio@tarcisio.com','123456')
-    .then(()=>{
-        alert('logado');
-    });
+
+
+const body = document.querySelector('[data-body]');
+const link = window.location.href;
+const url = new URL(link);
+const searchParams = new URLSearchParams(url.search); // For active browser link, use location.search
+const chave = searchParams.get('chave'); 
+let editarVerificacao = false;
+let vertorUrlImagens = [];
+
+
+const inputImagem = document.querySelector('[data-arquivo-imagem]');
+
+const menuAdm = (e) =>{
+
+    e.preventDefault();
+    window.location.href = 'menu-adm.html';
+
 }
-LoGa()
+
+
+    
+const dadosEditaveis =  (snapshoot) =>{
+        name.value = snapshoot.val().nome;
+        arquivo.file = snapshoot.val().url_imagem;
+        vertorUrlImagens.push(snapshoot.val().url_imagem);
+        descricao.value = snapshoot.val().descricao;
+        preco.value = snapshoot.val().preco;
+        categoria.value = snapshoot.val().categoria;
+        editarVerificacao=true;
+        console.log(vertorUrlImagens);
+}
+
+const verificaEdicao = () =>{
+
+   
+    if(!chave) return
+
+      dbRef.child(chave).on('value',dadosEditaveis);
+    
+    
+}
+
+ firebase.auth().onAuthStateChanged((user)=>{        
+   if(user){
+       const buttonLogin = document.querySelector('[data-button-login]');
+       buttonLogin.innerText = 'Menu Administrador';
+       buttonLogin.addEventListener('click',menuAdm);
+       body.classList.toggle('none');
+       return verificaEdicao();
+   }else{
+        window.location.href = 'login.html';
+   }
+})
+
+const updadeDados = (imagem) =>{
+    if(!imagem){
+        const data = {
+            nome: name.value,
+            preco: preco.value,
+            categoria: categoria.value,
+            descricao: descricao.value
+        }
+        console.log('Estou Aqui Sem trocar imagem');
+        dbRef.child(chave).update(data)
+        .then(()=>{
+            console.log('Atualizado com sucesso!');
+        })
+
+    }else{
+        if(imagem.type.includes('image'))
+         {
+             
+        const date =  Date.now();
+        const nome = date + '-' + imagem.name;
+        const caminho = 'Produtos/' + nome;
+        const storeRef = firebase.storage().ref(caminho);
+        storeRef.put(imagem)
+        .then((Elemento)=>{
+            storeRef.getDownloadURL()
+            .then((url) => {
+
+                const data = {
+                    url_imagem: url,
+                    nome: name.value,
+                    preco: preco.value,
+                    categoria: categoria.value,
+                    descricao: descricao.value
+                }
+                
+
+                dbRef.child(chave).update(data)
+               .then(()=>{
+                   console.log('Cheguei aqui');
+                   console.log(vertorUrlImagens[0]);
+                   console.log(data.url_imagem);
+                   if(!(vertorUrlImagens[0] === data.url_imagem)){
+                    firebase.storage().refFromURL(vertorUrlImagens[0]).delete()
+                    .then(console.log('funcionou'));
+                   }
+               }) 
+                
+
+            })
+        })
+          
+
+
+
+           
+
+        }
+
+        
+    }
+}
 
 const cadastraProduto = (e) => {
+    
     e.preventDefault();
-    alert('clicou');
+
+    
     const imagem = arquivo.files[0];
-   if(imagem.type.includes('image')) {
+    console.log(vertorUrlImagens);
+
+    
+
+    if(editarVerificacao){
+        
+        updadeDados(imagem)
+
+    }else{
+
+    
+
+
+    
+    if(imagem.type.includes('image')) {
+
        const date =  Date.now();
-       console.log(date);
        const nome = date + '-' + imagem.name;
        const caminho = 'Produtos/' + nome;
        const storeRef = firebase.storage().ref(caminho);
+
+
         storeRef.put(imagem)
         .then((Elemento)=>{
             storeRef.getDownloadURL()
             .then((url)=>{
-                console.log(name.value);
+                
                 const data = {
                     id:date,
                     url_imagem: url,
@@ -30,30 +157,23 @@ const cadastraProduto = (e) => {
                     categoria: categoria.value,
                     descricao: descricao.value
                 }
-                console.log(data)
+
                 dbRef.push(data).then((data)=>{
                     console.log('Funcionou!');
-                }).catch(()=> console.log('Deu ruim'));
+
+                }).catch(()=> console.log('Deu ruim')) 
             } )
             
-        })
+        })}
        
    };
 }
 
 
-const cadastraProdutoSemImagem = (e) =>{
-    e.preventDefault();
-    if(name.value !== ''){
-        const data = {
-            nome: name.value
-        }
-        dbRef.child(firebase.auth().currentUser.uid).push(data)
-        .then(()=>{
-            console.log('Tarefa add com sucesso');
-        })
-    }
-}
+
+
+
+
 
 const name =  document.querySelector('[data-nome]')
 const preco =  document.querySelector('[data-preco]')
@@ -61,6 +181,12 @@ const descricao = document.querySelector('[data-descricao]')
 const categoria = document.querySelector('[data-categoria]');
 const botaoProduto = document.querySelector('[data-botao-produto]');
 const arquivo = document.querySelector('[data-arquivo]');
+
 const database = firebase.database();
 const dbRef =  database.ref('Produto');
+
 botaoProduto.addEventListener('click',cadastraProduto);
+
+
+
+
