@@ -1,4 +1,8 @@
 .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     width: 8.3125rem;
     height: 2.5rem;
     background-color: var(--branco);
@@ -28,6 +32,10 @@
 
 
 .button--azul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     font-size: var(--tamanho-pequeno);
     font-weight: var(--peso-semi-bold);
     width: 9.4375rem;
