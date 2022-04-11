@@ -145,6 +145,7 @@ const cadastraProduto = (e) => {
 
         mainData.classList.toggle('none');
         carregaImagem.classList.toggle('none');
+        aguardeMsg.classList.toggle('data-img-animation');
         aguardeMsg.classList.toggle('none');
         storeRef.put(imagem)
         .then((Elemento)=>{

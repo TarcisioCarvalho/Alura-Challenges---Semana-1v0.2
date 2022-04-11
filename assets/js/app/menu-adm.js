@@ -4,7 +4,9 @@
         window.location.href = 'produtos.html';
     }
     
-    
+    const carregaImagem = document.querySelector('[data-img-animation]');
+    const aguardeMsg = document.querySelector('[ data-animation-frase]');
+    const mainData = document.querySelector('[data-main]');
     const body = document.querySelector('[data-body]');
     const buttonAddProduct = document.querySelector('[data-add-produto]');
     buttonAddProduct.addEventListener('click',addProduto);
@@ -93,6 +95,10 @@
             </article>`
         });
         atribuiEventos();
+        carregaImagem.classList.toggle('none');
+        aguardeMsg.classList.toggle('animation__frase');
+        aguardeMsg.classList.toggle('none'); 
+        mainData.classList.toggle('none');
     }
 
     const buscaDados =  () =>{
