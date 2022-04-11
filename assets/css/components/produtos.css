@@ -169,7 +169,6 @@
     }
     .produto-cadastro__formulario--label{
         width: 100%;
-        border: 1px solid red;
         display: flex;
         align-items: center;
         
