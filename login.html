@@ -38,38 +38,51 @@
             <form action="#" data-form >
                 <fieldset class="login">
                     <legend class="login__titulo" data-legend>Iniciar Sessão</legend>
-                    <label for="email" class="contato__label--nome"></label>
-                    <input id="email" type="email" class="contato__input--nome login__input--email" placeholder="Escreva seu email" data-email required>
+                   
+                    <input id="email" type="email" class="login__input--email" placeholder="Escreva seu email" data-email required>
                     <input type="password" class="contato__input--mensagem login__input--senha" placeholder="Escreva sua senha" data-senha required>
                     <button class="button--azul login__button" type="submit" data-autenticar >Entrar</button>
                 </fieldset>
             </form>
-                <section class="contato">
-                    <div class="contato__tablet">
-                        <div class="logo">
-                            <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
-                            <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
-                            <img src="./assets/img/AluraGeekgeek.svg" alt="" class="logo-icone">
-                        </div>
-                        <ul class="contato__lista">
-                            <li> <a href="" class="contato__lista--link"> Quem somos nós</a></li>
-                            <li> <a href="" class="contato__lista--link"> Política de privacidade</a> </li>
-                            <li> <a href="" class="contato__lista--link"> Programa fidelidade</a></li>
-                            <li> <a href="" class="contato__lista--link"> Nossas lojas</a></li>
-                            <li> <a href="" class="contato__lista--link"> Quero ser franqueado</a></li>
-                            <li> <a href="" class="contato__lista--link"> Anuncie aqui</a></li>
-                        </ul>
+            <section class="contato">
+                <div class="contato__tablet">
+                    <div class="logo">
+                        <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
+                        <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
+                        <img src="./assets/img/AluraGeekgeek.svg" alt="" class="logo-icone">
                     </div>
-                    <form action="#" class="contato__formulario">
-                        <fieldset>
-                            <legend class="contato__legend">Fale conosco</legend>
-                            <label for="nome" class="contato__label--nome">Nome</label>
-                            <input id="nome" type="text" class="contato__input--nome" placeholder="Escreva seu nome">
-                            <input type="text" class="contato__input--mensagem" placeholder="Escreva sua mensagem">
-                            <button class="button--azul" type="submit" >Enviar mensagem</button>
-                        </fieldset>
-                    </form>
-                </section>
+                    <ul class="contato__lista">
+                        <li> <a href="" class="contato__lista--link"> Quem somos nós</a></li>
+                        <li> <a href="" class="contato__lista--link"> Política de privacidade</a> </li>
+                        <li> <a href="" class="contato__lista--link"> Programa fidelidade</a></li>
+                        <li> <a href="" class="contato__lista--link"> Nossas lojas</a></li>
+                        <li> <a href="" class="contato__lista--link"> Quero ser franqueado</a></li>
+                        <li> <a href="" class="contato__lista--link"> Anuncie aqui</a></li>
+                    </ul>
+                </div>
+                <form action="#" class="contato__formulario" data-formulario>
+                    <fieldset>
+                        <legend class="contato__legend">Fale conosco</legend>
+                            <div class="contato__div">
+                                
+                                <input id="nome" type="text" class="contato__input--nome"  aria-placeholder="Escreva seu nome" required maxlength="40">
+                                <label for="nome" class="contato__label--nome">Nome:</label>
+                                
+        
+                            </div>
+                            <span class="contato__span--mensagem"></span>
+                        
+                            <div class="contado__div--mensagem">
+                                <input type="text" class="contato__input--mensagem" placeholder="Escreva sua mensagem" required maxlength="120" >
+                                <span class="contato__span--mensagem"></span>
+                            </div>
+        
+                       
+                        <button class="button--azul" type="submit" >Enviar mensagem</button>
+                    </fieldset>
+                </form>
+            </section>
+           <script src="./assets/js/app/contact.js"></script>
         </main>
        
         <footer class="rodape">

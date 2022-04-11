@@ -12,6 +12,74 @@ let vertorUrlImagens = [];
 
 const inputImagem = document.querySelector('[data-arquivo-imagem]');
 
+const meuArquivo = document.querySelector('[data-arquivo]');
+const divInputArquivo = meuArquivo.closest('[data-div-arquivo]');
+const buttonArquivo = document.querySelectorAll('[data-button-arquivo]');
+
+buttonArquivo.forEach(button =>{
+    button.addEventListener('click',e=>{
+        e.preventDefault();
+        meuArquivo.click();
+    })
+})
+
+divInputArquivo.addEventListener('click',e =>{
+    meuArquivo.click();
+});
+
+meuArquivo.addEventListener('change',e=>{
+    if(meuArquivo.files.length){
+        updateImgArquivo(divInputArquivo,meuArquivo.files[0])
+    }
+})
+
+divInputArquivo.addEventListener('dragover', e =>{
+    e.preventDefault();
+    divInputArquivo.classList.add('produto-cadastro__formulario--arquivos-over');
+})
+
+divInputArquivo.addEventListener('dragleave', e =>{
+    divInputArquivo.classList.remove('produto-cadastro__formulario--arquivos-over');
+})
+
+divInputArquivo.addEventListener('dragend',e =>{
+    divInputArquivo.classList.remove('produto-cadastro__formulario--arquivos-over');
+})
+
+divInputArquivo.addEventListener('drop',e=>{
+    e.preventDefault();
+    if(e.dataTransfer.files){
+        meuArquivo.files = e.dataTransfer.files;
+        updateImgArquivo(divInputArquivo,e.dataTransfer.files[0])
+    }
+    divInputArquivo.classList.remove('produto-cadastro__formulario--arquivos-over')
+})
+
+const updateImgArquivo = (divInputArquivo,file) =>{
+    const textoArquivo = divInputArquivo.querySelector('[data-texto-arquivo]');
+    const imgArquivo = divInputArquivo.querySelector('[data-arquivo-img]');
+    const reader = new FileReader();
+
+    reader.readAsDataURL(file);
+    reader.onload = () =>{
+        textoArquivo.classList.add('none');
+        imgArquivo.classList.remove('none');
+        divInputArquivo.style.backgroundColor = 'transparent';
+        imgArquivo.style.backgroundImage = `url(${reader.result})`
+    };
+}
+
+const updateImgArquivoEditavel = (divInputArquivo,arquivo)=>{
+    const textoArquivo = divInputArquivo.querySelector('[data-texto-arquivo]');
+    const imgArquivo = divInputArquivo.querySelector('[data-arquivo-img]');
+    console.log(divInputArquivo);
+    console.log(arquivo);
+    textoArquivo.classList.add('none');
+    imgArquivo.classList.remove('none');
+    divInputArquivo.style.backgroundColor = 'transparent';
+    imgArquivo.style.backgroundImage = `url(${arquivo})`
+}
+
 const menuAdm = (e) =>{
 
     e.preventDefault();
@@ -24,6 +92,7 @@ const menuAdm = (e) =>{
 const dadosEditaveis =  (snapshoot) =>{
         name.value = snapshoot.val().nome;
         arquivo.file = snapshoot.val().url_imagem;
+        updateImgArquivoEditavel(divInputArquivo,arquivo.file)
         vertorUrlImagens.push(snapshoot.val().url_imagem);
         descricao.value = snapshoot.val().descricao;
         preco.value = snapshoot.val().preco;

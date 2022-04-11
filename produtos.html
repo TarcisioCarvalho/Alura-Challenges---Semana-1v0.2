@@ -62,22 +62,32 @@
             <section class="produto-cadastro">
                 <form action="#" class="produto-cadastro__formulario" data-produto-formulario>
                     <legend class="produto-cadastro__formulario--legend">Adicionar novo produto </legend>
-                    <div class="produto-cadastro__formulario--arquivos">
-                        <label for="file" class="produto-cadastro__formulario--label">
-                            <img src="./assets/img/baby-yoda.jpg" alt="" class="produto-cadastro__formulario--label--imagem" data-arquivo-imagem>
-                            <img src="./assets/icos/Vectoradd.svg" alt="" class="produto-cadastro__formulario--legend--icone">
-                             <p class="produto-cadastro__formulario--label--paragrafo">Adicionar uma imagem para o produto</p>
-                         </label>
+                    <div class="produto-cadastro__formulario--label">
+                        <div class="produto-cadastro__formulario--arquivos" data-div-arquivo>
+                            <span class="produto-cadastro__formulario--arquivos-mensagem " data-texto-arquivo>Adicionar uma imagem para o produto</span>
+                            <input type="file" name="myFile" class="produto-cadastro__formulario--arquivos-arquivo" accept="image/*" data-arquivo>
+                           
+                            <div class="produto-cadastro__formulario--arquivos-meuArquivo none " data-arquivo-img></div>
+                            <!--<label for="file" class="produto-cadastro__formulario--label">
+                                <img src="./assets/img/baby-yoda.jpg" alt="" class="produto-cadastro__formulario--label--imagem" data-arquivo-imagem>
+                                <img src="./assets/icos/Vectoradd.svg" alt="" class="produto-cadastro__formulario--legend--icone">
+                                <p class="produto-cadastro__formulario--label--paragrafo">Adicionar uma imagem para o produto</p>
+                            </label>
+                            <p class="produto-cadastro__formulario--paragrafo-ou">ou</p>
+                            <button class="button produto-cadastro__formulario--arquivos--button"> <p class="tablet">Procure no seu tablet</p> <p class="computador">Procure no seu computador</p> </button> -->
+                        </div>
                         <p class="produto-cadastro__formulario--paragrafo-ou">ou</p>
-                        <button class="button produto-cadastro__formulario--arquivos--button"> <p class="tablet">Procure no seu tablet</p> <p class="computador">Procure no seu computador</p> </button>
+                        <button class="produto-cadastro__formulario--arquivos--button tablet" data-button-arquivo> Procure no seu tablet </button>
+                        <button class="produto-cadastro__formulario--arquivos--button computador" data-button-arquivo>  Procure no seu computador </button>
                     </div>
-                    <input type="file" id="file" class="produto-cadastro__formulario--arquivo"  data-arquivo  accept="image/*" >
+                      
+                    <!--<input type="file" id="file" class="produto-cadastro__formulario--arquivo"  data-arquivo  accept="image/*" > -->
                     <label for="nome-produto">Nome do produto</label>
                     <input type="text" id="nome-produto" class="produto__cadastro--texto" required  data-nome maxlength="20">
                     <label for="preco-produto">Preço do produto</label>
                     <input type="number"  id="preco-produto" class="produto__cadastro--texto" data-preco required>
                     <label for="categoria">Categoria do produto</label>
-                    <select name="categoria" id="" data-categoria>
+                    <select name="categoria" id="" class="produto__cadastro--categoria" data-categoria>
                         <option value="star-wars">Star Wars</option>
                         <option value="consoles">Consoles</option>
                         <option value="diversos">Diversos</option>
@@ -103,16 +113,29 @@
                         <li> <a href="" class="contato__lista--link"> Anuncie aqui</a></li>
                     </ul>
                 </div>
-                <form action="#" class="contato__formulario">
+                <form action="#" class="contato__formulario" data-formulario>
                     <fieldset>
                         <legend class="contato__legend">Fale conosco</legend>
-                        <label for="nome" class="contato__label--nome">Nome</label>
-                        <input id="nome" type="text" class="contato__input--nome" placeholder="Escreva seu nome">
-                        <input type="text" class="contato__input--mensagem" placeholder="Escreva sua mensagem">
+                            <div class="contato__div">
+                                
+                                <input id="nome" type="text" class="contato__input--nome"  aria-placeholder="Escreva seu nome" required maxlength="40">
+                                <label for="nome" class="contato__label--nome">Nome:</label>
+                                
+        
+                            </div>
+                            <span class="contato__span--mensagem"></span>
+                        
+                            <div class="contado__div--mensagem">
+                                <input type="text" class="contato__input--mensagem" placeholder="Escreva sua mensagem" required maxlength="120" >
+                                <span class="contato__span--mensagem"></span>
+                            </div>
+        
+                       
                         <button class="button--azul" type="submit" >Enviar mensagem</button>
                     </fieldset>
                 </form>
             </section>
+           <script src="./assets/js/app/contact.js"></script>
         </main>
         <footer class="rodape">
             <p class="rodape__paragrafo">Desenvolvido por Tarcísio Carvalho 2022</p>

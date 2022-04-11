@@ -69,21 +69,29 @@
                 <li> <a href="" class="contato__lista--link"> Anuncie aqui</a></li>
             </ul>
         </div>
-        <form action="#" class="contato__formulario">
+        <form action="#" class="contato__formulario" data-formulario>
             <fieldset>
                 <legend class="contato__legend">Fale conosco</legend>
-                
-                    <label for="nome" class="contato__label--nome">Nome</label>
-                    <input id="nome" type="text" class="contato__input--nome" placeholder="Escreva seu nome" required maxlength="40">
-                
-                
+                    <div class="contato__div">
+                        
+                        <input id="nome" type="text" class="contato__input--nome"  aria-placeholder="Escreva seu nome" required maxlength="40">
+                        <label for="nome" class="contato__label--nome">Nome:</label>
+                        
 
-                <input type="text" class="contato__input--mensagem" placeholder="Escreva sua mensagem" required maxlength="120">
+                    </div>
+                    <span class="contato__span--mensagem"></span>
+                
+                    <div class="contado__div--mensagem">
+                        <input type="text" class="contato__input--mensagem" placeholder="Escreva sua mensagem" required maxlength="120" >
+                        <span class="contato__span--mensagem"></span>
+                    </div>
+
+               
                 <button class="button--azul" type="submit" >Enviar mensagem</button>
             </fieldset>
         </form>
     </section>
-
+   <script src="./assets/js/app/contact.js"></script>
    </main> 
     <footer class="rodape">
     <p class="rodape__paragrafo">Desenvolvido por Tarcísio Carvalho 2022</p>
