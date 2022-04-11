@@ -75,10 +75,10 @@ const updadeDados = (imagem) =>{
             categoria: categoria.value,
             descricao: descricao.value
         }
-        console.log('Estou Aqui Sem trocar imagem');
+        
         dbRef.child(chave).update(data)
         .then(()=>{
-            console.log('Atualizado com sucesso!');
+           
             mainData.classList.toggle('none');
             carregaImagem.classList.toggle('none');
             aguardeMsg.classList.toggle('data-img-animation');
@@ -111,9 +111,7 @@ const updadeDados = (imagem) =>{
 
                 dbRef.child(chave).update(data)
                .then(()=>{
-                   console.log('Cheguei aqui');
-                   console.log(vertorUrlImagens[0]);
-                   console.log(data.url_imagem);
+                   
                    if(!(vertorUrlImagens[0] === data.url_imagem)){
                     firebase.storage().refFromURL(vertorUrlImagens[0]).delete()
                     .then(()=>{

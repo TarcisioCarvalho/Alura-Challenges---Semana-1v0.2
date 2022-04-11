@@ -50,10 +50,10 @@ const atualizaDados = async (snapshoot) =>{
             const sectionCard = document.createElement('section');
             console.log(sectionCard);
             sectionCard.innerHTML = `<article class="card__produto">
-            <img src=${urlImagem} alt="" class="card__produto--imagem">
+            <img src=${urlImagem} alt="${descricaoProduto}" class="card__produto--imagem">
             <div class="card__produto--dados">
                 <h2 class="card__produto--titulo">${nomeProduto}</h2>
-                <p class="card__produto--preco">${precoProduto}</p>
+                <p class="card__produto--preco">R$ ${precoProduto}</p>
                 <p class="card__produto--descricao">${descricaoProduto}!</p>
                 <p class="cards__produto--id" style="display: none;">${idProduto}</p>
                 <p class="cards__produto--categoria" style="display: none;">${categoriaProduto}</p>
@@ -68,18 +68,18 @@ const atualizaDados = async (snapshoot) =>{
             {
 
                 const article = `<article class="cards__produto">
-                <img src=${urlImagem} alt="" class="cards__produto--imagem">
+                <img src=${urlImagem} alt="${descricaoProduto}" class="cards__produto--imagem">
                 <h3 class="cards__produto--titulo">${nomeProduto}</h3>
-                <p class="cards__produto--preco">${precoProduto}</p>
+                <p class="cards__produto--preco">R$ ${precoProduto}</p>
                 <a href="" class="cards__produto--link" data-ver-produto>Ver produto</a>
                 <p class="cards__produto--id" style="display: none;">${idProduto}</p>
                 <p class="cards__produto--categoria" style="display: none;">${categoriaProduto}</p>
                 </article>`;
 
                 const articleDesktop = `<article class="cards__produto cards__produto--desktop">
-                <img src=${urlImagem} alt="" class="cards__produto--imagem">
+                <img src=${urlImagem} alt="${descricaoProduto}" class="cards__produto--imagem">
                 <h3 class="cards__produto--titulo">${nomeProduto}</h3>
-                <p class="cards__produto--preco">${precoProduto}</p>
+                <p class="cards__produto--preco">R$ ${precoProduto}</p>
                 <a href="" class="cards__produto--link" data-ver-produto>Ver produto</a>
                 <p class="cards__produto--id" style="display: none;">${idProduto}</p>
                 <p class="cards__produto--categoria" style="display: none;">${categoriaProduto}</p>

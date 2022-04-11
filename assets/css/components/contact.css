@@ -37,27 +37,52 @@
 
 .contato__legend{
     font-weight: var(--peso-bold);
+    margin-bottom: 1rem;
 }
 
-
-
-.contato__label--nome{
-    display: block;
-    border-radius: 0.25rem;
+.contato__div{
+    position: relative;
     
-   
-}
-
-.contato__input--nome{
     width: 91vw;
     height: 3.5rem;
     border-radius: 0.25rem;
     box-shadow: 0px 1px 0rem 0 RGBA(0,0,0,0.30);
     margin-bottom: 1rem;
+    background-color: var(--branco);
+}
+
+.contato__label--nome{
+    top: 1.75rem;
+    left: .75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    color: var(--cinza-claro);
+    position: absolute;
+    transition: .4s;
+}
+
+.contato__input--nome:focus ~ .contato__label--nome,
+.contato__input--nome:valid ~ .contato__label--nome{
+    top:.5rem;
+    font-size: 0.75rem;
+    letter-spacing: .1rem;
+}
+
+.contato__input--nome
+{
+    color: var(--preto-claro);
+    position: absolute;
+    appearance: none;
+    background-color: transparent;
+    outline: none;
+    margin-top: 1.75rem;
+    margin-right: 1rem;
+    margin-left: .75rem;
+    font-size: 1rem;
 }
 
 .contato__input--nome::placeholder{
-    position: absolute;
+    
   }
 
 .contato__input--mensagem{
@@ -66,9 +91,20 @@
     margin-bottom: .5rem;
     border-radius: 0.25rem;
     box-shadow: 0px 1px 0rem 0 RGBA(0,0,0,0.30);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
+
+
+.contato__span--mensagem{
+    display: flex;
+    padding: 0;
+    background-color: rgba(255,0,0,.2);
+}
+
 .contato__input--mensagem::placeholder{
-  position: absolute;
+  
 }
 .contato__button{
 
@@ -80,6 +116,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
+    }
+
+    .contato__div{
+        width: 56vw;
     }
 
     .contato__input--nome{
@@ -138,10 +178,13 @@
     }
 
    
-
-    .contato__input--nome{
+    .contato__div{
         width: 38vw;
         margin-right: 7vw;
+    }
+    .contato__input--nome{
+        width: 38vw;
+       
     }
 
     .contato__input--mensagem{

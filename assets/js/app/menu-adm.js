@@ -89,7 +89,7 @@
                     <a href="" data-editar><img src="./assets/icos/VectorEditar.svg" alt="Editar"  class="cards__produto-home--icones cards__produto-home--icones--editar"></a>
                 </div>
                 <h3 class="cards__produto--titulo">${nomeProduto}</h3>
-                <p class="cards__produto--preco">$${precoProduto}</p>
+                <p class="cards__produto--preco">R$ ${precoProduto}</p>
                 <p href="" class="cards__produto--id">#${idProduto}</p>
                 <p href="" class="cards__produto--id none" data-key>#${keyProduto}</p>
             </article>`

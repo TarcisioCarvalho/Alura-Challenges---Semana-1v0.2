@@ -28,7 +28,7 @@ const atualizaDados =  (snapshoot) =>{
         `<article class="cards__produto">
         <img src=${urlImagem} alt=${descricaoProduto} class="cards__produto--imagem">
         <h3 class="cards__produto--titulo">${nomeProduto}</h3>
-        <p class="cards__produto--preco">${precoProduto}</p>
+        <p class="cards__produto--preco">R$ ${precoProduto}</p>
         <a href="" class="cards__produto--link" data-ver-produto>Ver produto</a>
         <p class="cards__produto--id" style="display: none;">${idProduto}</p>
         <p class="cards__produto--categoria" style="display: none;">${categoriaProduto}</p>

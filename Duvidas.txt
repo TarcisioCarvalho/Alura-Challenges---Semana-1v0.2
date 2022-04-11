@@ -1,4 +1,0 @@
-Como posicionar o botão melhor no header.
-
-Como colocar uma label no input-text e trabalhar com placeholder dentro dos inputs(posicionar acima),
-como digitar alinhado em cima no input-text.
