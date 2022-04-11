@@ -1,7 +1,7 @@
 <h1 align = center> Alura-Challenges---AluraGeek
 <h1>
     <div align = "center">
-        <img src="./assets/img/logo.svg" alt="">
+        <img src="assets/img/Logo.svg" alt="">
     </div>
 </h1>
 <h1 align="center">Link para a página</h1>
