@@ -33,6 +33,7 @@
 
 
 .button--azul{
+    display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
@@ -44,7 +45,6 @@
     color: var(--branco);
     padding: 0.75rem 1rem 0.75rem 1rem;
     cursor: pointer;
-    display: block;
 }
 
 @media screen and (min-width:1440x){

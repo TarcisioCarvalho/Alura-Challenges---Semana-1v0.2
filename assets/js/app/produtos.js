@@ -29,13 +29,22 @@ const dadosEditaveis =  (snapshoot) =>{
         preco.value = snapshoot.val().preco;
         categoria.value = snapshoot.val().categoria;
         editarVerificacao=true;
-        console.log(vertorUrlImagens);
+        carregaImagem.classList.toggle('none');
+        aguardeMsg.classList.toggle('animation__frase');
+        aguardeMsg.classList.toggle('none'); 
+        mainData.classList.toggle('none');
 }
 
 const verificaEdicao = () =>{
 
    
-    if(!chave) return
+    if(!chave){
+        carregaImagem.classList.toggle('none');
+        aguardeMsg.classList.toggle('animation__frase');
+        aguardeMsg.classList.toggle('none'); 
+        mainData.classList.toggle('none');
+        return
+    } 
 
       dbRef.child(chave).on('value',dadosEditaveis);
     
@@ -56,6 +65,10 @@ const verificaEdicao = () =>{
 
 const updadeDados = (imagem) =>{
     if(!imagem){
+        mainData.classList.toggle('none');
+        carregaImagem.classList.toggle('none');
+        aguardeMsg.classList.toggle('data-img-animation');
+        aguardeMsg.classList.toggle('none');
         const data = {
             nome: name.value,
             preco: preco.value,
@@ -66,6 +79,12 @@ const updadeDados = (imagem) =>{
         dbRef.child(chave).update(data)
         .then(()=>{
             console.log('Atualizado com sucesso!');
+            mainData.classList.toggle('none');
+            carregaImagem.classList.toggle('none');
+            aguardeMsg.classList.toggle('data-img-animation');
+            aguardeMsg.classList.toggle('none');
+            alert('Produto Atualizado com sucesso!');
+            location.reload();
         })
 
     }else{
@@ -97,7 +116,14 @@ const updadeDados = (imagem) =>{
                    console.log(data.url_imagem);
                    if(!(vertorUrlImagens[0] === data.url_imagem)){
                     firebase.storage().refFromURL(vertorUrlImagens[0]).delete()
-                    .then(console.log('funcionou'));
+                    .then(()=>{
+                        mainData.classList.toggle('none');
+                        carregaImagem.classList.toggle('none');
+                        aguardeMsg.classList.toggle('data-img-animation');
+                        aguardeMsg.classList.toggle('none');
+                        alert('Produto Atualizado com sucesso!');
+                        location.reload();
+                    });
                    }
                }) 
                 
@@ -147,6 +173,7 @@ const cadastraProduto = (e) => {
         carregaImagem.classList.toggle('none');
         aguardeMsg.classList.toggle('data-img-animation');
         aguardeMsg.classList.toggle('none');
+
         storeRef.put(imagem)
         .then((Elemento)=>{
             storeRef.getDownloadURL()
@@ -197,7 +224,7 @@ formularioProduto.addEventListener('submit',(e)=>{
     try{
         cadastraProduto(e);
     }catch(e){
-        alert('Prencha correntamente!');
+        alert('Preencha correntamente!');
     }
 });
 
