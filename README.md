@@ -9,8 +9,8 @@
 
 O objetivo do desafio foi desenvolver um projeto front-end com a temática do e-commerce AluraGeek que podemos ver nesse link do figma: https://www.figma.com/file/itJpWbvHxSUcUeMPy1lmof/AluraGeek?node-id=55%3A1104
 
-O site deve ser totalmente **responsivo** emoti celular tablet e pc.
-Além da parte visual também foi necessario implementar diversar funcionalidades como:
+O site deve ser totalmente **responsivo** :desktop_computer: :pager: :iphone: .
+Além da parte visual também foi necessário implementar diversas funcionalidades como:
 
 <h2>Funcionalidades:</h2>
 <ul>
