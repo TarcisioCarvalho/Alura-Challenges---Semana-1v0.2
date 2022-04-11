@@ -33,13 +33,11 @@
         <main>
             <form action="#" data-form >
                 <fieldset class="login">
-                    <legend class="login__titulo" data-legend>Iniciar Sessão/Cadastrar Novo Usuário</legend>
+                    <legend class="login__titulo" data-legend>Iniciar Sessão</legend>
                     <label for="email" class="contato__label--nome"></label>
-                    <input id="email" type="email" class="contato__input--nome login__input--email" placeholder="Escreva seu email" data-email>
-                    <input type="password" class="contato__input--mensagem login__input--senha" placeholder="Escreva sua senha" data-senha>
+                    <input id="email" type="email" class="contato__input--nome login__input--email" placeholder="Escreva seu email" data-email required>
+                    <input type="password" class="contato__input--mensagem login__input--senha" placeholder="Escreva sua senha" data-senha required>
                     <button class="button--azul login__button" type="submit" data-autenticar >Entrar</button>
-                    <button class="button--azul login__button" type="submit" data-cadastrar >Verifica Login</button>
-                    <button class="button--azul login__button" type="submit" data-sair >Sair</button>
                 </fieldset>
             </form>
                 <section class="contato">

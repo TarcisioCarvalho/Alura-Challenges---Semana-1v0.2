@@ -41,6 +41,7 @@ const atualizaDados =  (snapshoot) =>{
         })
     
     carregaImagem.classList.toggle('none');
+    aguardeMsg.classList.toggle('animation__frase');
     aguardeMsg.classList.toggle('none'); 
     mainData.classList.toggle('none');
     titulo.classList.toggle('none');

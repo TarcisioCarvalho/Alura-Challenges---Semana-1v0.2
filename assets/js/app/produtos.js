@@ -188,11 +188,17 @@ const arquivo = document.querySelector('[data-arquivo]');
 const mainData = document.querySelector('[data-main]'); 
 const carregaImagem = document.querySelector('[data-img-animation]');
 const aguardeMsg = document.querySelector('[ data-animation-frase]');
-
+const formularioProduto = document.querySelector('[data-produto-formulario]');
 const database = firebase.database();
 const dbRef =  database.ref('Produto');
 
-botaoProduto.addEventListener('click',cadastraProduto);
+formularioProduto.addEventListener('submit',(e)=>{
+    try{
+        cadastraProduto(e);
+    }catch(e){
+        alert('Prencha correntamente!');
+    }
+});
 
 
 

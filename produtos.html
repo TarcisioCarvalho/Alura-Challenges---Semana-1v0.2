@@ -31,7 +31,7 @@
         -->
         <header class="cabecalho">
             <div class="cabecalho__logo-pesquisa">
-                <a href="#">
+                <a href="index.html">
                     <div class="logo">
                         <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
                         <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
@@ -41,7 +41,7 @@
                 <input type="text" class="input" placeholder="O que deseja encontrar?" data-pesquisa>
             </div>
             <button class="button flex" data-button-login>
-                Login
+                Menu Administrador
             </button>
             <input type="text" class="cabecalho__input--mobile none" data-input-mobile>
             <a href=""#>
@@ -51,6 +51,9 @@
         </header>
         
         <script src="./assets/js/app/cabecalho.js"></script>
+        
+       
+        
         <p class="animation__frase none"  data-animation-frase>Aguarde...........</p>
         <div class="animation__imagem none" data-img-animation>
             
@@ -58,22 +61,22 @@
       
         <main data-main class="main">
             <section class="produto-cadastro">
-                <form action="" class="produto-cadastro__formulario" >
+                <form action="#" class="produto-cadastro__formulario" data-produto-formulario>
                     <legend class="produto-cadastro__formulario--legend">Adicionar novo produto </legend>
                     <div class="produto-cadastro__formulario--arquivos">
                         <label for="file" class="produto-cadastro__formulario--label">
-                            <img src="" alt="" class="produto-cadastro__formulario--label--imagem" data-arquivo-imagem>
+                            <img src="./assets/img/baby-yoda.jpg" alt="" class="produto-cadastro__formulario--label--imagem" data-arquivo-imagem>
                             <img src="./assets/icos/Vectoradd.svg" alt="" class="produto-cadastro__formulario--legend--icone">
                              <p class="produto-cadastro__formulario--label--paragrafo">Adicionar uma imagem para o produto</p>
                          </label>
                         <p class="produto-cadastro__formulario--paragrafo-ou">ou</p>
                         <button class="button produto-cadastro__formulario--arquivos--button"> <p class="tablet">Procure no seu tablet</p> <p class="computador">Procure no seu computador</p> </button>
                     </div>
-                    <input type="file" id="file" class="produto-cadastro__formulario--arquivo" data-arquivo>
+                    <input type="file" id="file" class="produto-cadastro__formulario--arquivo"  data-arquivo  accept="image/*" >
                     <label for="nome-produto">Nome do produto</label>
-                    <input type="text" id="nome-produto" class="produto__cadastro--texto" data-nome>
+                    <input type="text" id="nome-produto" class="produto__cadastro--texto" required  data-nome maxlength="20">
                     <label for="preco-produto">Preço do produto</label>
-                    <input type="text"  id="preco-produto" class="produto__cadastro--texto" data-preco>
+                    <input type="number"  id="preco-produto" class="produto__cadastro--texto" data-preco required>
                     <label for="categoria">Categoria do produto</label>
                     <select name="categoria" id="" data-categoria>
                         <option value="star-wars">Star Wars</option>
@@ -81,8 +84,8 @@
                         <option value="diversos">Diversos</option>
                     </select>
                     <label for="descricao-produto">Descrição do produto</label>
-                    <input type="text" id="descricao-produto" class="produto__cadastro--texto" data-descricao>
-                    <button type="submit" class="button--azul produto__cadastro--button" data-botao-produto="">Adicionar produto</button>
+                    <input type="text" id="descricao-produto" class="produto__cadastro--texto" data-descricao required maxlength="150">
+                    <button type="submit" class="button--azul produto__cadastro--button" data-botao-produto>Adicionar produto</button>
                 </form>
             </section>
             <section class="contato">
@@ -115,6 +118,7 @@
         <footer class="rodape">
             <p class="rodape__paragrafo">Desenvolvido por Tarcísio Carvalho 2022</p>
         </footer>
+        
         <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
         <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>

@@ -32,13 +32,52 @@
     
     <script src="./assets/js/app/cabecalho.js"></script>
 
-    <main>
+    <p class="animation__frase"  data-animation-frase>Aguarde...........</p>
+    <div class="animation__imagem" data-img-animation></div>
+
+    <main class="none"  data-main>
 
         <h2 class="cards__titulo cards__container" data-titulo></h2>
         <section class="cards cards__container" data-cards>
         </section>
 
+        <section class="contato">
+            <div class="contato__tablet">
+                <div class="logo">
+                    <img src="./assets/img/Vectorlogo.svg" alt="" class="logo-alura">
+                    <img src="./assets/img/AluraGeekAlura.svg" alt="" class="logo-geek">
+                    <img src="./assets/img/AluraGeekgeek.svg" alt="" class="logo-icone">
+                </div>
+                <ul class="contato__lista">
+                    <li> <a href="" class="contato__lista--link"> Quem somos nós</a></li>
+                    <li> <a href="" class="contato__lista--link"> Política de privacidade</a> </li>
+                    <li> <a href="" class="contato__lista--link"> Programa fidelidade</a></li>
+                    <li> <a href="" class="contato__lista--link"> Nossas lojas</a></li>
+                    <li> <a href="" class="contato__lista--link"> Quero ser franqueado</a></li>
+                    <li> <a href="" class="contato__lista--link"> Anuncie aqui</a></li>
+                </ul>
+            </div>
+            <form action="#" class="contato__formulario">
+                <fieldset>
+                    <legend class="contato__legend">Fale conosco</legend>
+                    
+                        <label for="nome" class="contato__label--nome">Nome</label>
+                        <input id="nome" type="text" class="contato__input--nome" placeholder="Escreva seu nome" required maxlength="40">
+                    
+                    
+    
+                    <input type="text" class="contato__input--mensagem" placeholder="Escreva sua mensagem" required maxlength="120">
+                    <button class="button--azul" type="submit" >Enviar mensagem</button>
+                </fieldset>
+            </form>
+        </section>
+    
+
     </main>
+
+    <footer class="rodape">
+        <p class="rodape__paragrafo">Desenvolvido por Tarcísio Carvalho 2022</p>
+    </footer>
 
         <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
         <script  src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>

@@ -19,12 +19,20 @@ const tentativaLogar = (e) =>{
 }
 
 
+const verificaFormulario = (e) =>{
+    console.log(e.target);
+    e.preventDefault();
+}
+
+const formulario = document.querySelector('[data-form]');
 
 const email = document.querySelector('[data-email]');
 const senha = document.querySelector('[data-senha]');
 
+formulario.addEventListener('submit', tentativaLogar)
+
 const botaoAutenticar = document.querySelector('[data-autenticar]');
-botaoAutenticar.addEventListener('click',tentativaLogar);
+//botaoAutenticar.addEventListener('click',tentativaLogar);
 
 
 

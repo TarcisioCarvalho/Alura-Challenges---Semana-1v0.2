@@ -98,7 +98,10 @@ const atualizaDados = async (snapshoot) =>
         }
         
     })
-
+    carregaImagem.classList.toggle('none');
+    aguardeMsg.classList.toggle('animation__frase');
+    aguardeMsg.classList.toggle('none'); 
+    mainData.classList.toggle('none');
 }
 
 
@@ -107,6 +110,11 @@ const atualizaDados = async (snapshoot) =>
 const sectionStarWars = document.querySelector('[data-star-wars]');
 const sectionConsole = document.querySelector('[data-console]');
 const sectionDiversos = document.querySelector('[data-diversos]');
+
+
+const carregaImagem = document.querySelector('[data-img-animation]');
+const aguardeMsg = document.querySelector('[data-animation-frase]');
+const mainData = document.querySelector('[data-main]');
 
 const linkVerTudo = document.querySelectorAll('[data-ver-tudo]');
 linkVerTudo.forEach(element=>{

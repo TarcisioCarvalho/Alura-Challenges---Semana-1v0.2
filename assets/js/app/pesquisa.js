@@ -1,3 +1,4 @@
+firebase.auth().signOut();
 
 const link = window.location.href;
 const url = new URL(link);
@@ -6,6 +7,11 @@ const nome = searchParams.get('nome');
 
 const sectionCards = document.querySelector('[data-cards]');
 const titulo = document.querySelector('[data-titulo]');
+
+    const carregaImagem = document.querySelector('[data-img-animation]');
+    const aguardeMsg = document.querySelector('[data-animation-frase]');
+    const mainData = document.querySelector('[data-main]');
+    console.log(carregaImagem);
 
 const database = firebase.database();
 const dbRef =  database.ref('Produto');
@@ -19,11 +25,8 @@ const verProduto =  (event)=>{
     event.preventDefault();
     //const articleProduto = (event.target).parentNode.parentNode.removeChild((event.target).parentNode);
     const articleProduto = event.target.parentNode;
-    console.log(articleProduto);
     const id = articleProduto.children[4].innerText;
-   
     const categoria = articleProduto.children[5].innerText;
-   
     window.location= `ver-produto.html?id=${id}&categoria=${categoria}`;
 }
 
@@ -33,6 +36,10 @@ const filtra = (snapshoot) =>{
    
     if(!snapshoot.val()){
         titulo.innerText = 'Nada Encontrado';
+        carregaImagem.classList.toggle('none');
+        aguardeMsg.classList.toggle('animation__frase');
+        aguardeMsg.classList.toggle('none'); 
+        mainData.classList.toggle('none');
         return
     }
 
@@ -61,10 +68,14 @@ const filtra = (snapshoot) =>{
         linkVerProduto.forEach(element => {
             element.addEventListener('click',verProduto);
         })
-   
+        
+        carregaImagem.classList.toggle('none');
+        aguardeMsg.classList.toggle('animation__frase');
+        aguardeMsg.classList.toggle('none'); 
+        mainData.classList.toggle('none');
 }
 
-
+    
 
     dbRef.orderByChild('nome').startAt(nome).endAt(nome + '\uf8ff').once('value')
     .then(filtra)

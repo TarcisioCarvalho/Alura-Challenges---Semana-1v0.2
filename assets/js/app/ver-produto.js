@@ -93,9 +93,16 @@ const atualizaDados = async (snapshoot) =>{
             }
         }
     });
+    carregaImagem.classList.toggle('none');
+    aguardeMsg.classList.toggle('animation__frase');
+    aguardeMsg.classList.toggle('none'); 
+    mainData.classList.toggle('none');
 }
 const titulo = document.querySelector('[data-titulo]');
 const sectionCards = document.querySelector('[data-section]');
+const carregaImagem = document.querySelector('[data-img-animation]');
+const aguardeMsg = document.querySelector('[ data-animation-frase]');
+const mainData = document.querySelector('[data-main]');
 
 const database = firebase.database();
 const dbRef =  database.ref('Produto');

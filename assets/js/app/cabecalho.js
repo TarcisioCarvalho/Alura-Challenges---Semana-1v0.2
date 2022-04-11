@@ -20,8 +20,6 @@ const aparecePesquisa = (e) =>{
 
     buttonLogin.classList.toggle('flex');
     buttonLogin.classList.toggle('none');
-
-    
     inputPesquisaMobile.classList.toggle('none');
     
 

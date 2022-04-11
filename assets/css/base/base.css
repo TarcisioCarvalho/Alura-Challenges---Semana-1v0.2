@@ -7,6 +7,7 @@
 }
 
 body{
+    box-sizing: border-box;
     font-family: var(--familia-fonte);
     background-color: var(--cinza-fundo);
 }
@@ -33,28 +34,59 @@ body{
 } */
 
 
+@keyframes textoAnimado {
+    0%{
+        width: 0%;
+        
+    }
+    25%{
+        width: 5%;
+    }
+    50%{
+        width: 10%;
+        
+    }
+    75%{
+        width: 15%;
+    }
+    100%{
+        width: 20%;
+        
+    }
+}
+
 
 .animation__imagem{
-     background-image: url('../../img/loading.gif');
+    background-image: url('../../img/loading.gif');
     background-position: center;
     background-size: cover; 
     border-radius: 100%;
     
     animation: loading 2s linear infinite;
-    width: 30rem;
-    height: 30rem;
+    width: 50vw;
+    height: 50vh;
     opacity: .7;
     position: relative;
     margin: auto;
+    margin-bottom: 10vh;
 }
 
 .animation__frase{
-
-   margin: 1rem; 
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   white-space: nowrap;
+   margin: auto;
    padding: 1rem;
-   text-align: center;
+  
    font-size: var(--tamanho-titulo);
    font-weight: var(--peso-bold);
    color:var(--cinza-claro);
-
+   overflow: hidden;
+   animation: textoAnimado 5s infinite steps(40) both;
 }
+
