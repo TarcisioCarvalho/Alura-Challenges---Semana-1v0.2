@@ -4,10 +4,17 @@
         <img src="assets/img/Logo.svg" alt="">
     </div>
 </h1>
-<h1 align="center">Link para a página</h1>
+
+
+[Link Para a Página](https://tarcisiocarvalho.github.io/Alura-Challenges---Semana-1v0.2)
+
+
+
 <h2> Alura - AluraGeek<h2>
 
-O objetivo do desafio foi desenvolver um projeto front-end com a temática do e-commerce AluraGeek que podemos ver nesse link do figma: https://www.figma.com/file/itJpWbvHxSUcUeMPy1lmof/AluraGeek?node-id=55%3A1104
+O objetivo do desafio foi desenvolver um projeto front-end com a temática do e-commerce AluraGeek que podemos ver nesse link do figma:
+[Layout](https://www.figma.com/file/itJpWbvHxSUcUeMPy1lmof/AluraGeek?node-id=55%3A1104)
+ 
 
 O site deve ser totalmente **responsivo** :desktop_computer: :pager: :iphone: .
 Além da parte visual também foi necessário implementar diversas funcionalidades como:
@@ -34,9 +41,9 @@ Além da parte visual também foi necessário implementar diversas funcionalidad
  <h3><li>Responsividade em todas as páginas.</li></h3>
  gif
 <h3><li>Ver descrição de produto.</li></h3>
-gif
+<img src="assets/gifs/descricao.gif" alt="">
  <h3><li>Pesquisar por nome.</li></h3>
- gif
+ <img src="assets/gifs/pesquisa.gif" alt="">
  <h3><li>Autenticação</li></h3>
  <img src="assets/gifs/login.gif" alt="">
 <h3><li>Cadastro de novo produto (DragDrop implementado)(Admin)</li></h3>
