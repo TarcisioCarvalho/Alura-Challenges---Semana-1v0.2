@@ -72,8 +72,6 @@ const updateImgArquivo = (divInputArquivo,file) =>{
 const updateImgArquivoEditavel = (divInputArquivo,arquivo)=>{
     const textoArquivo = divInputArquivo.querySelector('[data-texto-arquivo]');
     const imgArquivo = divInputArquivo.querySelector('[data-arquivo-img]');
-    console.log(divInputArquivo);
-    console.log(arquivo);
     textoArquivo.classList.add('none');
     imgArquivo.classList.remove('none');
     divInputArquivo.style.backgroundColor = 'transparent';
@@ -215,7 +213,7 @@ const cadastraProduto = (e) => {
 
     
     const imagem = arquivo.files[0];
-    console.log(vertorUrlImagens);
+   
 
     
 
@@ -238,8 +236,9 @@ const cadastraProduto = (e) => {
 
         mainData.classList.toggle('none');
         carregaImagem.classList.toggle('none');
-        aguardeMsg.classList.toggle('data-img-animation');
-        aguardeMsg.classList.toggle('none');
+        console.log('Cheguei aqui');
+        /* aguardeMsg.classList.toggle('data-img-animation');
+        aguardeMsg.classList.toggle('none'); */
 
         storeRef.put(imagem)
         .then((Elemento)=>{

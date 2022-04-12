@@ -38,12 +38,12 @@ gif
  <h3><li>Pesquisar por nome.</li></h3>
  gif
  <h3><li>Autenticação</li></h3>
- gif
+ <iframe src="https://giphy.com/embed/FQBRD9ry8fhjQGYC1O" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/FQBRD9ry8fhjQGYC1O"></a></p>
+
 <h3><li>Cadastro de novo produto (DragDrop implementado)(Admin)</li></h3>
 gif
  <h3><li>Edição e exclusão de produtos </li></h3>
  gif
-
 
  Ver descrição de produto.
  dif
