@@ -33,8 +33,12 @@ Além da parte visual também foi necessário implementar diversas funcionalidad
  
  
  <h2>Tecnologias</h2>
- <h3>html5 + css3 para a parte visual</h3>
- <h3>Javascript emot puro + firebase emot</h3>
+ <h3>Construção da Página: </h3>
+ <h3><img src="assets/icos/icons8-html-5-48.png" alt=""> <img src="assets/icos/Vectoradd.svg" alt=""> <img src="assets/icos/icons8-css3-48.png" alt=""> </h3>
+ <h1>(Html e Css)</h1>
+<h3>Funcionalidades:</h3>
+ <h3><img src="assets/icos/icons8-javascript.svg" alt=""> <img src="assets/icos/Vectoradd.svg" alt=""> <img src="assets/icos/icons8-firebase-48.png" alt=""></h3>
+ <h1>(Javascript e Firebase)</h1>
 
  <h2>Resultados:</h2>
  
@@ -64,5 +68,5 @@ gif
  
  <h2>Conclusão: </h2>
  
- O alura challenge foi uma excelente opurtunidade de praticar e estudar de uma forma estruturada e guiada, os ganhos de aprendizado nessas ultimas semanas foram consideraveis tendo em vista a dificuldade do projeto, foi uma excelente opurtunidade de testar meu nível de html,css e javascript também, já que tinha o objetivo de formar uma base sólida antes de aprender um framework. 
+ O alura challenge foi uma excelente opurtunidade de praticar e estudar de uma forma estruturada e guiada, os ganhos de aprendizado nessas últimas semanas foram consideraveis, tendo em vista a dificuldade do projeto, foi uma excelente opurtunidade de testar meu nível de html,css e javascript também, já que tinha o objetivo de formar uma base sólida antes de aprender um framework. 
  Só tenho a agradecer a alura pelo desafio proposto, foi muito divertido encara-lo!!
