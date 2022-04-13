@@ -53,7 +53,7 @@ const atualizaDados = async (snapshoot) =>{
             <img src=${urlImagem} alt="${descricaoProduto}" class="card__produto--imagem">
             <div class="card__produto--dados">
                 <h2 class="card__produto--titulo">${nomeProduto}</h2>
-                <p class="card__produto--preco">R$ ${precoProduto}</p>
+                <p class="card__produto--preco"> ${precoProduto}</p>
                 <p class="card__produto--descricao">${descricaoProduto}!</p>
                 <p class="cards__produto--id" style="display: none;">${idProduto}</p>
                 <p class="cards__produto--categoria" style="display: none;">${categoriaProduto}</p>
@@ -70,7 +70,7 @@ const atualizaDados = async (snapshoot) =>{
                 const article = `<article class="cards__produto">
                 <img src=${urlImagem} alt="${descricaoProduto}" class="cards__produto--imagem">
                 <h3 class="cards__produto--titulo">${nomeProduto}</h3>
-                <p class="cards__produto--preco">R$ ${precoProduto}</p>
+                <p class="cards__produto--preco"> ${precoProduto}</p>
                 <a href="" class="cards__produto--link" data-ver-produto>Ver produto</a>
                 <p class="cards__produto--id" style="display: none;">${idProduto}</p>
                 <p class="cards__produto--categoria" style="display: none;">${categoriaProduto}</p>
