@@ -1,6 +1,6 @@
 
 
-
+console.warn = () => {};
 const body = document.querySelector('[data-body]');
 const link = window.location.href;
 const url = new URL(link);
@@ -285,6 +285,46 @@ const aguardeMsg = document.querySelector('[ data-animation-frase]');
 const formularioProduto = document.querySelector('[data-produto-formulario]');
 const database = firebase.database();
 const dbRef =  database.ref('Produto');
+
+/* const verificaCampoNome = (e) =>{
+    let flag = true;
+   if(e.target.validity.valueMissing && flag){
+       
+        const MsgErro = document.querySelector('[data-span-erro-nome]');
+        MsgErro.classList.toggle('none');
+   }
+}
+
+   const verificaCampoCategoria = (e)=>{
+
+    if(e.target.validity.valueMissing){
+        const MsgErro = document.querySelector('[data-span-erro-categoria]');
+        MsgErro.classList.toggle('none');
+    }  
+   }
+
+
+name.addEventListener('blur',verificaCampoNome);
+name.addEventListener('blur',verificaCampoCategoria); */
+
+
+const args = {
+    prefix: 'R$ ',
+    suffix: '',
+    fixed: true,
+    fractionDigits: 2,
+    decimalSeparator: ',',
+    thousandsSeparator: '.',
+    cursor: 'end'
+  };
+
+  try{
+    SimpleMaskMoney.setMask(preco,args)
+  }catch(e){
+    
+  }
+
+
 
 formularioProduto.addEventListener('submit',(e)=>{
     try{

@@ -112,6 +112,15 @@
     cursor: pointer;
 }
 
+.produt-cadastro__mensagem-erro{
+    color: red;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.158);
+    border: 1px solid white;
+    border-radius: 0.25rem;
+    font-weight: var(--peso-regular);
+}
+
 @media screen and (min-width:768px){
     .produto-cadastro{
         margin-top: 2rem;

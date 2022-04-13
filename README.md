@@ -43,7 +43,7 @@ Além da parte visual também foi necessário implementar diversas funcionalidad
  <h2>Resultados:</h2>
  
  <h3><li>Responsividade em todas as páginas.</li></h3>
- gif
+<img src="assets/gifs/responsividade.gif" alt="">
 <h3><li>Ver descrição de produto.</li></h3>
 <img src="assets/gifs/descricao.gif" alt="">
  <h3><li>Pesquisar por nome.</li></h3>
@@ -51,22 +51,17 @@ Além da parte visual também foi necessário implementar diversas funcionalidad
  <h3><li>Autenticação</li></h3>
  <img src="assets/gifs/login.gif" alt="">
 <h3><li>Cadastro de novo produto (DragDrop implementado)(Admin)</li></h3>
-gif
+<img src="assets/gifs/dragdrop.gif" alt="">
+<img src="assets/gifs/addproduto.gif" alt="">
  <h3><li>Edição e exclusão de produtos </li></h3>
- gif
+<img src="assets/gifs/excluir.gif" alt="">
+        <img src="assets/gifs/edit.gif" alt="">
 
- Ver descrição de produto.
- dif
- Pesquisa por nome.
- gif
- Autenticação
- gif
- Cadastro de novo produto (DragDrop implementado)
- gif
- Edição e exclusão de produtos 
- gif
  
  <h2>Conclusão: </h2>
  
- O alura challenge foi uma excelente opurtunidade de praticar e estudar de uma forma estruturada e guiada, os ganhos de aprendizado nessas últimas semanas foram consideraveis, tendo em vista a dificuldade do projeto, foi uma excelente opurtunidade de testar meu nível de html,css e javascript também, já que tinha o objetivo de formar uma base sólida antes de aprender um framework. 
- Só tenho a agradecer a alura pelo desafio proposto, foi muito divertido encara-lo!!
+O alura challenge foi uma excelente oportunidade de praticar e estudar de uma forma estruturada e guiada, os ganhos de aprendizado nessas semanas foram consideráveis, tendo em vista a dificuldade do projeto.
+
+Aproveitei para testar meu nível de html, css e javascript, já que tinha o objetivo de formar uma base sólida antes de aprender um framework. 
+
+ Só tenho a agradecer a alura pelo desafio proposto, foi muito divertido encará-lo!!

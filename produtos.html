@@ -83,9 +83,11 @@
                       
                     <!--<input type="file" id="file" class="produto-cadastro__formulario--arquivo"  data-arquivo  accept="image/*" > -->
                     <label for="nome-produto">Nome do produto</label>
+                    <span class="produt-cadastro__mensagem-erro none" data-span-erro-nome>Campo Obrigatório</span>
                     <input type="text" id="nome-produto" class="produto__cadastro--texto" required  data-nome maxlength="20">
                     <label for="preco-produto">Preço do produto</label>
-                    <input type="number"  id="preco-produto" class="produto__cadastro--texto" data-preco required>
+                    <span class="produt-cadastro__mensagem-erro none" data-span-erro>Campo Obrigatório</span>
+                    <input type="text"  id="preco-produto" class="produto__cadastro--texto" data-preco required maxlength="14">
                     <label for="categoria">Categoria do produto</label>
                     <select name="categoria" id="" class="produto__cadastro--categoria" data-categoria>
                         <option value="star-wars">Star Wars</option>
@@ -93,6 +95,7 @@
                         <option value="diversos">Diversos</option>
                     </select>
                     <label for="descricao-produto">Descrição do produto</label>
+                    <span class="produt-cadastro__mensagem-erro none" data-span-erro-categoria>Campo Obrigatório</span>
                     <input type="text" id="descricao-produto" class="produto__cadastro--texto" data-descricao required maxlength="150">
                     <button type="submit" class="button--azul produto__cadastro--button" data-botao-produto>Adicionar produto</button>
                 </form>
@@ -147,6 +150,8 @@
         <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
         
         <script src="./assets/js/firebase/firebase.js"></script>
-        <script src="./assets/js/app/produtos.js"></script>
+        <script type="module" src="./assets/js/app/produtos.js"></script>
+
+        <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>
     </body>
 </html>
